@@ -61,7 +61,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-text animate-fadeInUp">
           <h1>
-            <span className="greeting-text">Hi, I'm</span> <span className="name-highlight">Nafiz Khan</span> 👋
+            <span className="greeting-text">Hi, I'm</span> <span className="name-highlight">Nafiz Khan</span> 
           </h1>
           <div className="typewriter-container">
             <span className="typewriter-text">
