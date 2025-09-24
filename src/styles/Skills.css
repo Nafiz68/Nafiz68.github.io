@@ -26,10 +26,13 @@
 
 .skills-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skill-category {
@@ -37,7 +40,7 @@
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 2rem;
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(50px);
@@ -187,9 +190,9 @@
 
 .circular-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 3rem;
-  max-width: 800px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -263,15 +266,16 @@
   .skills-categories {
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 100%;
   }
   
   .skill-category {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
   }
   
   .circular-skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
   
   .skill-item:hover {
@@ -285,8 +289,8 @@
   }
   
   .circular-skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
   }
   
   .category-title {

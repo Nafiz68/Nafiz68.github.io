@@ -5,60 +5,51 @@ export default function Certificates() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  const certificates = [
-    {
-      title: "Intro to Machine Learning",
-      issuer: "Kaggle",
-      date: "2025",
-      image: "/images/certificates/Intro to Machine Learning.png",
-      description: "Comprehensive certification covering cloud architecture, security, and best practices for AWS services.",
-      skills: ["Machine Learning", "Kaggle", "AI", "Python"]
-    },
-    {
-      title: "React Developer Certification",
-      issuer: "Meta (Facebook)",
-      date: "2024",
-      image: "/images/certificates/react-cert.jpg",
-      description: "Advanced React development certification covering hooks, state management, and modern React patterns.",
-      skills: ["React", "JavaScript", "Frontend", "State Management"]
-    },
-    {
-      title: "Python for Data Science",
-      issuer: "IBM",
-      date: "2023",
-      image: "/images/certificates/python-cert.jpg",
-      description: "Comprehensive Python certification focusing on data analysis, machine learning, and data visualization.",
-      
-      skills: ["Python", "Data Science", "Machine Learning", "Pandas"]
-    },
-    {
-      title: "Google Cloud Professional",
-      issuer: "Google Cloud",
-      date: "2023",
-      image: "/images/certificates/gcp-cert.jpg",
-      description: "Professional cloud architect certification covering GCP services, deployment, and cloud solutions.",
-      
-      skills: ["Google Cloud", "Cloud Computing", "Kubernetes", "DevOps"]
-    },
-    {
-      title: "Full Stack Web Development",
-      issuer: "FreeCodeCamp",
-      date: "2023",
-      image: "/images/certificates/fullstack-cert.jpg",
-      description: "Complete full-stack development certification covering front-end, back-end, and database technologies.",
-     
-      skills: ["Full Stack", "Node.js", "MongoDB", "Express.js"]
-    },
-    {
-      title: "Machine Learning Specialization",
-      issuer: "Stanford University",
-      date: "2022",
-      image: "/images/certificates/ml-cert.jpg",
-      description: "Advanced machine learning specialization covering algorithms, neural networks, and deep learning.",
-  
-      skills: ["Machine Learning", "Neural Networks", "TensorFlow", "AI"]
-    }
-  ];
+const certificates = [
+  {
+    title: "AI Foundation",
+    issuer: "AI Certs",
+    date: "2025",
+    image: "/images/certificates/AF.jpg",
+    description: "Covered core AI concepts, machine learning, ethics, and business applications."
+  },
+  {
+    title: "Intro to Machine Learning",
+    issuer: "Kaggle",
+    date: "2025",
+    image: "/images/certificates/Intro to Machine Learning.png",
+    description: "Learned practical data science and machine learning applications."
+  },
+  {
+    title: "Intermediate ChatGPT",
+    issuer: "DataCamp",
+    date: "2025",
+    image: "/images/certificates/ChatGPT.jpg",
+    description: "Focused on advanced prompt engineering and understanding GPT architecture."
+  },
+  {
+    title: "Learn Blockchain and Cryptocurrency from Beginning",
+    issuer: "Udemy",
+    date: "2025",
+    image: "/images/certificates/Blockchain.jpg",
+    description: "Gained foundational knowledge in blockchain, Bitcoin, crypto exchanges, and DeFi."
+  },
+  {
+    title: "Introduction to Microsoft 365 Copilot",
+    issuer: "Microsoft Learn",
+    date: "2025",
+    image: "/images/certificates/MS365.jpg",
+    description: "Learned AI integration in Microsoft productivity tools."
+  },
+  {
+    title: "Intermediate SQL",
+    issuer: "DataCamp",
+    date: "2024",
+    image: "/images/certificates/SQL.jpg",
+    description: "Mastered aggregate functions, sorting, grouping, and data presentation in SQL."
+  }
+];
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -119,11 +110,7 @@ export default function Certificates() {
                 <p className="certificate-issuer">{cert.issuer}</p>
                 <p className="certificate-description">{cert.description}</p>
                 
-                <div className="certificate-skills">
-                  {cert.skills.map((skill, skillIdx) => (
-                    <span key={skillIdx} className="cert-skill-tag">{skill}</span>
-                  ))}
-                </div>
+                
               </div>
             </div>
           ))}

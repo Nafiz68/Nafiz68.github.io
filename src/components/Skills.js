@@ -7,63 +7,43 @@ export default function Skills() {
 
   const skillCategories = [
     {
-      category: "Frontend Development",
+      category: "Programming Languages",
       skills: [
-        { name: "React", level: 90, icon: "⚛️" },
-        { name: "JavaScript", level: 88, icon: "📜" },
-        { name: "TypeScript", level: 80, icon: "🔷" },
-        { name: "HTML/CSS", level: 92, icon: "🎨" },
-        { name: "Responsive Design", level: 85, icon: "📱" }
+        { name: "Python", level: 90, icon: "🐍" },
+        { name: "C", level: 65, icon: "⚙️" },
+        { name: "JavaScript", level: 77, icon: "�" },
+        { name: "HTML", level: 82, icon: "🎨" },
+        { name: "CSS", level: 78, icon: "🌐" },
       ]
     },
     {
-      category: "Backend Development",
+      category: "Frameworks & Technologies",
       skills: [
-        { name: "Node.js", level: 85, icon: "🚀" },
-        { name: "Python", level: 88, icon: "🐍" },
-        { name: "Express.js", level: 80, icon: "⚡" },
-        { name: "REST APIs", level: 87, icon: "🔗" },
-        { name: "GraphQL", level: 75, icon: "📊" }
+        { name: "React", level: 69, icon: "⚛️" },
+        { name: "Node.js", level: 66, icon: "�" },
+        { name: "Express.js", level: 63, icon: "⚡" },
+        { name: "Next.js", level: 79, icon: "�" },
+        { name: "Tailwind CSS", level: 55, icon: "🎯" }
       ]
     },
     {
-      category: "Database & Tools",
+      category: "Databases & Tools",
       skills: [
+        { name: "MySQL", level: 84, icon: "🗄️" },
         { name: "MongoDB", level: 82, icon: "🍃" },
-        { name: "PostgreSQL", level: 78, icon: "🐘" },
-        { name: "Git", level: 90, icon: "📋" },
-        { name: "Docker", level: 75, icon: "🐳" },
-        { name: "AWS", level: 70, icon: "☁️" }
+        { name: "Git/GitHub", level: 89, icon: "🐙" },
+        { name: "VS Code", level: 93, icon: "💻" },
+        { name: "Postman", level: 86, icon: "�" },
       ]
     },
     {
-      category: "AI & Data Science",
+      category: "Specialized Areas",
       skills: [
-        { name: "Machine Learning", level: 80, icon: "🤖" },
-        { name: "TensorFlow", level: 75, icon: "🧠" },
-        { name: "Data Analysis", level: 85, icon: "📈" },
-        { name: "OpenAI API", level: 82, icon: "🎯" },
-        { name: "Pandas", level: 88, icon: "🐼" }
-      ]
-    },
-    {
-      category: "AI & Data Science",
-      skills: [
-        { name: "Machine Learning", level: 80, icon: "🤖" },
-        { name: "TensorFlow", level: 75, icon: "🧠" },
-        { name: "Data Analysis", level: 85, icon: "📈" },
-        { name: "OpenAI API", level: 82, icon: "🎯" },
-        { name: "Pandas", level: 88, icon: "🐼" }
-      ]
-    },
-    {
-      category: "AI & Data Science",
-      skills: [
-        { name: "Machine Learning", level: 80, icon: "🤖" },
-        { name: "TensorFlow", level: 75, icon: "🧠" },
-        { name: "Data Analysis", level: 85, icon: "📈" },
-        { name: "OpenAI API", level: 82, icon: "🎯" },
-        { name: "Pandas", level: 88, icon: "🐼" }
+        { name: "Machine Learning", level: 83, icon: "🤖" },
+        { name: "Data Science", level: 81, icon: "📊" },
+        { name: "Competitive Programming", level: 87, icon: "🏆" },
+        { name: "AI Security / LLM Research", level: 85, icon: "🔐" },
+        { name: "Web Development", level: 90, icon: "🌐" }
       ]
     }
   ];
@@ -140,8 +120,9 @@ export default function Skills() {
             {[
               { name: "Problem Solving", percentage: 95, color: "#667eea" },
               { name: "Team Work", percentage: 90, color: "#764ba2" },
-              { name: "Leadership", percentage: 85, color: "#f093fb" },
-              { name: "Communication", percentage: 88, color: "#f5576c" }
+              { name: "Communication", percentage: 88, color: "#f5576c" },
+              { name: "Analytical Thinking", percentage: 93, color: "#f093fb" },
+              { name: "Continuous Learning", percentage: 91, color: "#4ecdc4" }
             ].map((skill, idx) => (
               <div 
                 key={idx} 

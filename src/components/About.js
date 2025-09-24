@@ -48,15 +48,15 @@ const About = () => {
             <div className="story-card">
               <h3>My Story</h3>
               <p>
-                I'm a passionate full-stack developer with a love for creating innovative 
-                digital solutions. My journey in technology began during my university years, 
-                where I discovered the power of code to transform ideas into reality.
+                I'm a passionate Computer Science and Engineering student at BRAC University 
+                with a strong foundation in software development and problem-solving. My journey 
+                in technology started with competitive programming, where I honed my analytical 
+                thinking and algorithm design skills.
               </p>
               <p>
-                With a strong foundation in both front-end and back-end technologies, 
-                I enjoy building applications that not only function seamlessly but also 
-                provide exceptional user experiences. I'm constantly learning and adapting 
-                to new technologies to stay at the forefront of web development.
+                With experience in full-stack development, machine learning, and mobile app development,
+                I enjoy creating innovative solutions that make a real impact. I'm always eager to learn 
+                new technologies and take on challenging projects that push the boundaries of what's possible.
               </p>
             </div>
 
@@ -67,34 +67,31 @@ const About = () => {
                 <div className="education-details">
                   <h4>Bachelor of Computer Science and Engineering</h4>
                   <p>BRAC University • 2022-2026</p>
-                  <p>GPA: 3.63/4.0 </p>
                 </div>
               </div>
               
               <div className="achievements">
                 <h4>Key Achievements</h4>
-                <ul> 
-                  <li>🌟 Published research paper on Web Performance</li>
-                  <li>💼 Led development team for 3 major projects</li>
-                </ul>
+                  <ul>
+                    <li>🎯 Solved 150+ problems across various competitive programming platforms</li>
+                    <li>💻 Developed multiple full-stack web applications with scalable backend and RESTful APIs</li>
+                    {/* <li>🔐 Conducted research on adversarial attacks against LLMs, proposing novel defense mechanisms</li> */}
+                    <li>📊 Implemented machine learning models for real-world datasets, improving prediction accuracy</li>
+                  </ul>
+
               </div>
             </div>
           </div>
 
-        
+          
           <div className="career-objectives">
             <div className="objectives-card">
               <h3>What I Do</h3>
               <div className="objectives-grid">
                 <div className="objective-item">
-                  <div className="objective-icon">🚀</div>
-                  <h4>Web Development</h4>
-                  <p>Creating responsive, user-friendly web applications with modern technologies</p>
-                </div>
-                <div className="objective-item">
-                  <div className="objective-icon">⚡</div>
-                  <h4>Performance Optimization</h4>
-                  <p>Optimizing applications for speed, scalability, and better user experience</p>
+                  <div className="objective-icon">🌐</div>
+                  <h4>Full-Stack Development</h4>
+                  <p>Building end-to-end web applications using modern technologies like React, Node.js, and databases</p>
                 </div>
                 <div className="objective-item">
                   <div className="objective-icon">🔧</div>
@@ -102,9 +99,14 @@ const About = () => {
                   <p>Analyzing complex problems and delivering elegant, efficient solutions</p>
                 </div>
                 <div className="objective-item">
-                  <div className="objective-icon">🌐</div>
-                  <h4>Full-Stack Solutions</h4>
-                  <p>Building complete applications from database design to user interface</p>
+                  <div className="objective-icon">🤖</div>
+                  <h4>Machine Learning & AI</h4>
+                  <p>Applying machine learning algorithms and data science techniques to solve real-world problems</p>
+                </div>
+                <div className="objective-item">
+                  <div className="objective-icon">⚡</div>
+                  <h4>Competitive Programming</h4>
+                  <p>Solving algorithmic challenges and participating in coding competitions to sharpen problem-solving skills</p>
                 </div>
               </div>
             </div>

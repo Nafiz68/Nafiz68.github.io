@@ -9,9 +9,10 @@ export default function Hero() {
   
   const roles = useMemo(() => [
     'Software Engineer',
-    'CS Undergrad',
+    'Full-Stack Developer',
     'Problem Solver',
-    'Tech Enthusiast'
+    'Tech Enthusiast',
+    'Machine Learning Enthusiast',
   ], []);
 
   useEffect(() => {
@@ -70,15 +71,16 @@ export default function Hero() {
             </span>
           </div>
           <p className="hero-description">
-            Passionate about creating innovative solutions and learning cutting-edge technologies.
-            Always excited to take on new challenges and build amazing projects.
+            Computer Science Engineering student at BRAC University with a passion for full-stack development, 
+            machine learning, and blockchain technology. I've solved 150+ competitive programming problems and 
+            love building scalable applications that solve real-world challenges.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
-              View My Work
+              Explore My Projects
             </a>
             <a href="#contact" className="btn btn-outline">
-              Get In Touch
+              Let's Connect
             </a>
           </div>
         </div>
@@ -89,7 +91,7 @@ export default function Hero() {
             <div className="profile-image">
               <img 
                 src="/images/profile-photo.jpg" 
-                alt="Nafiz Khan - Software Engineer"
+                alt="Nafiz Khan - Full-Stack Developer & Software Engineer"
                 className="profile-photo"
               />
             </div>

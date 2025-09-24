@@ -5,51 +5,48 @@ export default function Projects() {
   const projects = [
     {
       title: "Thesis Management System",
-      description: "AI-powered chatbot to guide students through thesis submission process with intelligent recommendations and real-time assistance.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["React", "Node.js", "OpenAI", "MongoDB"],
+      description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
+
+      github: "https://github.com/Faishal-Monir/Thesis-Management-System",
+      demo: "https://github.com/Nafiz68/thesis-management",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
     {
-      title: "Bayesian Clustering Project",
+      title: " VaDE —Variational Deep Embedding for Face Clustering",
       description: "Deep clustering implementation on Olivetti Faces dataset using Bayesian Deep Clustering Networks (BDCN) with advanced statistical methods.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["Python", "TensorFlow", "Scikit-learn", "NumPy"],
+      github: "https://github.com/Nafiz68/Variational-Deep-Embedding-VaDE-for-Face-Clustering",
+      tech: ["Python", "PyTorch", "Scikit-learn", "NumPy"],
       category: "Machine Learning"
     },
     {
-      title: "Portfolio Website",
-      description: "Modern, responsive portfolio website built with React featuring smooth animations, glassmorphism design, and interactive elements.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["React", "CSS3", "JavaScript", "Responsive Design"],
-      category: "Web Development"
-    },
-    {
-      title: "Task Management App",
-      description: "Full-stack task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["React", "Express.js", "Socket.io", "PostgreSQL"],
+      title: "Software-Course-Management-System",
+      description: " Web-based platform for managing university courses, allowing administrators to create courses, assign instructors, enroll students, and track academic progress.",
+      github: "https://github.com/asiradnan/Software-Course-Management-System",
+      demo: "https://github.com/Nafiz68/hospital-management",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
     {
-      title: "Task Management App",
-      description: "Full-stack task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["React", "Express.js", "Socket.io", "PostgreSQL"],
-      category: "Full Stack"
+      title: " DisasterGuard DApp — Blockchain Disaster Recovery Training Platform",
+      description: " Built a decentralized application (DApp) for training and awareness in disaster recovery, leveraging blockchain for secure certification and training records.",
+      github: "https://github.com/Nafiz68/DisasterGuard-DApp---Blockchain-Disaster-Recovery-Training-Platform",
+      tech: ["Solidity", "Ethereum", "Web3.js", "Ganache"],
+      category: "Blockchain / Dapp"
     },
     {
-      title: "Task Management App",
-      description: "Full-stack task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      github: "https://github.com/your-repo",
-      demo: "#",
-      tech: ["React", "Express.js", "Socket.io", "PostgreSQL"],
-      category: "Full Stack"
+      title: " The Science of Cinema: Predicting Movie Ratings",
+      description: "Implemented machine learning models to predict movie ratings based on various features, analyzing data from multiple sources.",
+      github: "https://github.com/Nafiz68/The-Science-of-Cinema-Predicting-Movie-Ratings-Through-Data",
+      tech: ["Python", "Pandas", "Scikit-learn", "NumPy"],
+      category: "Machine Learning"
+    },
+    {
+      title: " BlockProperty — Decentralized Property Registry on Hyperledger Fabric",
+      description: "Blockchain-based property registry system ensuring transparent, secure, and tamper-proof land ownership records.",
+      github: "https://github.com/Nafiz68/BlockProperty---Decentralized-Property-Registry-on-Hyperledger-Fabric",
+      tech: [" Hyperledger Fabric", "Node.js", " Docker", "Smart Contracts (Chaincode)"],
+      category: "Blockchain"
     }
   ];
 
@@ -87,12 +84,14 @@ export default function Projects() {
                   </svg>
                   GitHub
                 </a>
-                <a href={project.demo} className="project-link project-link-primary">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                  Live Demo
-                </a>
+                {project.demo && (
+                  <a href={project.demo} className="project-link project-link-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}

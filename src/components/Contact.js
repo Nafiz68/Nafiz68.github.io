@@ -221,7 +221,7 @@ export default function Contact() {
           <h3>Connect With Me</h3>
           <div className="social-icons">
             <a 
-              href="https://www.facebook.com/your-profile" 
+              href="https://www.facebook.com/nafiz.khan.52687" 
               className="social-icon facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -232,7 +232,7 @@ export default function Contact() {
               </svg>
             </a>
             <a 
-              href="https://www.instagram.com/your-profile" 
+              href="https://www.instagram.com/nafiz_khan_68" 
               className="social-icon instagram"
               target="_blank"
               rel="noopener noreferrer"

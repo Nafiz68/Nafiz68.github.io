@@ -46,6 +46,9 @@
   overflow: hidden;
   opacity: 0;
   transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card.animate-fadeInUp {
@@ -112,6 +115,7 @@
 
 .project-content {
   margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 .project-title {
@@ -164,6 +168,7 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-top: auto;
 }
 
 .project-link {
