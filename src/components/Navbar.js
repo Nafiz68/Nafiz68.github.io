@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
+import { useTheme } from '../contexts/ThemeContext';
 import "../styles/Navbar.css";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const toggleNav = () => setNavOpen(!navOpen);
   const closeNav = () => setNavOpen(false);
@@ -48,9 +50,19 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile Menu Icon */}
-        <div className="nav-icon" onClick={toggleNav}>
-          {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        {/* Theme Toggle & Mobile Menu */}
+        <div className="navbar-controls">
+          <button 
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+          </button>
+          
+          <div className="nav-icon" onClick={toggleNav}>
+            {navOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </div>
         </div>
       </div>
     </nav>

@@ -9,20 +9,23 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 import "./styles/App.css"; // global styles
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Certificates />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Certificates />
+        <Contact />
+      </div>
+    </ThemeProvider>
   );
 }
 
