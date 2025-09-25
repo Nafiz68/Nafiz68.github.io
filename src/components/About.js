@@ -27,27 +27,13 @@ const About = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    try {
-      // Create a download link for CV
-      const link = document.createElement('a');
-      link.href = '/resume.pdf'; // You'll need to add your resume.pdf to the public folder
-      link.download = 'CV_Nafiz_Khan_BSc_CSE.pdf';
-      
-      // For mobile compatibility, add the link to DOM briefly
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // Fallback for mobile devices - open in new tab if download fails
-      setTimeout(() => {
-        if (!document.hidden) {
-          window.open('/resume.pdf', '_blank');
-        }
-      }, 1000);
-    } catch (error) {
-      // Final fallback - direct navigation
-      window.open('/resume.pdf', '_blank');
-    }
+    // Direct download approach
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Nafiz_Khan_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   
@@ -131,7 +117,24 @@ const About = () => {
             <div className="cv-card">
               <h3>Want to know more?</h3>
               <p>Download my complete resume for detailed information about my experience and projects.</p>
-              <button className="cv-button" onClick={handleDownloadCV}>
+              <button 
+                className="cv-button" 
+                onClick={handleDownloadCV}
+                style={{
+                  background: 'linear-gradient(45deg, #ff6b6b, #feca57)',
+                  color: 'white',
+                  border: 'none',
+                  padding: '15px 30px',
+                  borderRadius: '50px',
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  marginTop: '20px'
+                }}
+              >
                 <span className="cv-icon">📄</span>
                 Download Resume
               </button>

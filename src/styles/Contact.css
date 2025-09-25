@@ -563,6 +563,7 @@
   .contact-form-container {
     padding: 2rem 1.5rem;
     position: static;
+    text-align: center; /* Center form content */
   }
   
   .contact-method {
@@ -593,6 +594,11 @@
   .contact-info-card,
   .contact-form-container {
     padding: 1.5rem 1rem;
+    text-align: center; /* Center form content on mobile */
+  }
+  
+  .contact-form {
+    text-align: left; /* Keep form fields left-aligned for usability */
   }
   
   .form-group input,
@@ -603,6 +609,8 @@
   .submit-btn {
     font-size: 1rem;
     min-height: 48px;
+    margin: 0 auto; /* Center the button */
+    margin-top: 1rem;
   }
   
   .contact-methods {

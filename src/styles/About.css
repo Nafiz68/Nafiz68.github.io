@@ -11,6 +11,40 @@
   .about-section {
     padding: 80px 0;
   }
+  
+  /* Center align all content on mobile */
+  .story-card h3,
+  .education-card h3,
+  .objectives-card h3,
+  .cv-card h3,
+  .about-header h2,
+  .section-title {
+    text-align: center;
+  }
+  
+  .story-card p,
+  .education-card p,
+  .cv-card p {
+    text-align: center;
+  }
+  
+  .education-item {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .education-details {
+    text-align: center;
+  }
+  
+  .achievements h4 {
+    text-align: center;
+  }
+  
+  .achievements ul {
+    text-align: center;
+    list-style-position: inside;
+  }
 }
 
 @media (max-width: 480px) {
@@ -310,6 +344,11 @@
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    align-items: center; /* Center the icon and content */
+  }
+  
+  .education-icon {
+    align-self: center; /* Ensure icon is centered */
   }
 }
 
@@ -459,31 +498,57 @@
 }
 
 /* CV Download */
+.cv-download {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .cv-card {
   text-align: center;
   margin-top: 40px;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  max-width: 500px;
+  width: 100%;
 }
 
 .cv-button {
-  background: linear-gradient(45deg, #ff6b6b, #feca57);
-  color: white;
-  border: none;
+  background: linear-gradient(45deg, #ff6b6b, #feca57) !important;
+  color: white !important;
+  border: none !important;
   padding: 15px 30px;
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.3s ease;
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 10px;
   margin-top: 20px;
   box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10;
+  position: relative;
 }
 
 .cv-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ff5252, #ffb300);
+}
+
+.cv-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
 }
 
 .cv-icon {
@@ -641,5 +706,11 @@
   .objectives-card,
   .cv-card {
     padding: 25px 15px;
+    text-align: center; /* Center all content on small mobile */
+  }
+  
+  .cv-button {
+    margin: 0 auto; /* Center the button on small mobile */
+    display: block;
   }
 }
