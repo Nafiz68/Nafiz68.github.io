@@ -11,7 +11,7 @@ export default function Skills() {
       skills: [
         { name: "Python", level: 90, icon: "🐍" },
         { name: "C", level: 65, icon: "⚙️" },
-        { name: "JavaScript", level: 77, icon: "�" },
+        { name: "JavaScript", level: 77, icon: "🟨" },
         { name: "HTML", level: 82, icon: "🎨" },
         { name: "CSS", level: 78, icon: "🌐" },
       ]
@@ -20,9 +20,9 @@ export default function Skills() {
       category: "Frameworks & Technologies",
       skills: [
         { name: "React", level: 69, icon: "⚛️" },
-        { name: "Node.js", level: 66, icon: "�" },
+        { name: "Node.js", level: 66, icon: "🟢" },
         { name: "Express.js", level: 63, icon: "⚡" },
-        { name: "Next.js", level: 79, icon: "�" },
+        { name: "Next.js", level: 79, icon: "▲" },
         { name: "Tailwind CSS", level: 55, icon: "🎯" }
       ]
     },
@@ -33,7 +33,7 @@ export default function Skills() {
         { name: "MongoDB", level: 82, icon: "🍃" },
         { name: "Git/GitHub", level: 89, icon: "🐙" },
         { name: "VS Code", level: 93, icon: "💻" },
-        { name: "Postman", level: 86, icon: "�" },
+        { name: "Postman", level: 86, icon: "📮" },
       ]
     },
     {
