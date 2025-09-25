@@ -8,6 +8,7 @@
   background: var(--background-section);
   overflow: hidden;
   padding: 2rem;
+  padding-top: 8rem; /* Add padding-top to account for fixed navbar */
 }
 
 .hero-background {
@@ -432,7 +433,8 @@
 @media (max-width: 768px) {
   .hero {
     padding: 1rem;
-    min-height: calc(100vh - 80px);
+    padding-top: 6rem; /* Reduced padding for mobile */
+    min-height: calc(100vh - 60px); /* Adjust min-height for mobile navbar */
   }
   
   .shape {
@@ -443,6 +445,7 @@
 @media (max-width: 480px) {
   .hero {
     padding: 0.5rem;
+    padding-top: 5rem; /* Further reduced padding for small mobile */
   }
   
   .hero-text h1 {

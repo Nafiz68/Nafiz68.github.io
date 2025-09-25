@@ -3,6 +3,7 @@ import '../styles/Skills.css';
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
 
   const skillCategories = [
@@ -49,13 +50,31 @@ export default function Skills() {
   ];
 
   useEffect(() => {
+    // Check if device is mobile for better animation handling
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          // Add a small delay for mobile devices to ensure smooth animation
+          setTimeout(() => {
+            setIsVisible(true);
+          }, isMobile ? 200 : 0);
         }
       },
-      { threshold: 0.3 }
+      { 
+        threshold: isMobile ? 0.1 : 0.2, // Lower threshold for mobile
+        rootMargin: isMobile ? '100px' : '50px' // Larger root margin for mobile
+      }
     );
 
     if (sectionRef.current) {
@@ -63,7 +82,7 @@ export default function Skills() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isMobile]);
 
   return (
     <section id="skills" className="skills-section" ref={sectionRef}>

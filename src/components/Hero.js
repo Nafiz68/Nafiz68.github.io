@@ -71,9 +71,9 @@ export default function Hero() {
             </span>
           </div>
           <p className="hero-description">
-            Computer Science Engineering student at BRAC University with a passion for full-stack development, 
-            machine learning, and blockchain technology. I've solved 150+ competitive programming problems and 
-            love building scalable applications that solve real-world challenges.
+            Passionate Computer Science student at BRAC University specializing in full-stack development, 
+            machine learning, and competitive programming. Building innovative solutions that bridge 
+            technology and real-world impact.
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">

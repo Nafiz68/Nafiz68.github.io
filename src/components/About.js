@@ -27,11 +27,27 @@ const About = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    // Create a download link for CV
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume.pdf to the public folder
-    link.download = 'CV_Nafiz_Khan_BSc_CSE.pdf';
-    link.click();
+    try {
+      // Create a download link for CV
+      const link = document.createElement('a');
+      link.href = '/resume.pdf'; // You'll need to add your resume.pdf to the public folder
+      link.download = 'CV_Nafiz_Khan_BSc_CSE.pdf';
+      
+      // For mobile compatibility, add the link to DOM briefly
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Fallback for mobile devices - open in new tab if download fails
+      setTimeout(() => {
+        if (!document.hidden) {
+          window.open('/resume.pdf', '_blank');
+        }
+      }, 1000);
+    } catch (error) {
+      // Final fallback - direct navigation
+      window.open('/resume.pdf', '_blank');
+    }
   };
 
   
@@ -48,15 +64,14 @@ const About = () => {
             <div className="story-card">
               <h3>My Story</h3>
               <p>
-                I'm a passionate Computer Science and Engineering student at BRAC University 
-                with a strong foundation in software development and problem-solving. My journey 
-                in technology started with competitive programming, where I honed my analytical 
-                thinking and algorithm design skills.
+                My journey in technology began with competitive programming, where I developed strong 
+                analytical thinking and algorithm design skills. This foundation led me to explore 
+                full-stack development, where I discovered my passion for creating end-to-end solutions.
               </p>
               <p>
-                With experience in full-stack development, machine learning, and mobile app development,
-                I enjoy creating innovative solutions that make a real impact. I'm always eager to learn 
-                new technologies and take on challenging projects that push the boundaries of what's possible.
+                Today, I focus on building scalable web applications, implementing machine learning models, 
+                and exploring emerging technologies like blockchain. I thrive on solving complex problems 
+                and turning innovative ideas into functional, impactful software solutions.
               </p>
             </div>
 
