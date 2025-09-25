@@ -79,7 +79,7 @@ export default function Hero() {
             <a href="#projects" className="btn btn-primary">
               Explore My Projects
             </a>
-            <a href="#contact" className="btn btn-outline">
+            <a href="#contact" className="btn btn-primary">
               Let's Connect
             </a>
           </div>

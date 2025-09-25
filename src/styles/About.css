@@ -197,6 +197,22 @@
   transform: translateY(50px) rotateX(10deg);
 }
 
+[data-theme="light"] .story-card,
+[data-theme="light"] .education-card,
+[data-theme="light"] .objectives-card,
+[data-theme="light"] .cv-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .story-card:hover,
+[data-theme="light"] .education-card:hover,
+[data-theme="light"] .objectives-card:hover,
+[data-theme="light"] .cv-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 768px) {
   .story-card,
   .education-card,

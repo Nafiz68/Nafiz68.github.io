@@ -119,9 +119,9 @@ export default function Skills() {
           <div className="circular-skills-grid">
             {[
               { name: "Problem Solving", percentage: 95, color: "#667eea" },
-              { name: "Team Work", percentage: 90, color: "#764ba2" },
+              { name: "Team Work", percentage: 90, color: "#61da5fff" },
               { name: "Communication", percentage: 88, color: "#f5576c" },
-              { name: "Analytical Thinking", percentage: 93, color: "#f093fb" },
+              { name: "Analytical Thinking", percentage: 93, color: "#683cc7ff" },
               { name: "Continuous Learning", percentage: 91, color: "#4ecdc4" }
             ].map((skill, idx) => (
               <div 

@@ -23,16 +23,37 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Using Formspree for form submission
+      const response = await fetch('https://formspree.io/f/xvgwgzyp', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
       setTimeout(() => {
         setSubmitStatus('');
-      }, 3000);
-    }, 2000);
+      }, 5000);
+    }
   };
 
   const contactInfo = [
@@ -203,25 +224,25 @@ export default function Contact() {
                   Message sent successfully! I'll get back to you soon.
                 </div>
               )}
+
+              {submitStatus === 'error' && (
+                <div className="submit-error">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                  </svg>
+                  Failed to send message. Please try again or email me directly.
+                </div>
+              )}
             </form>
           </div>
         </div>
 
-        {/* <div className="contact-cta">
-          <div className="cta-content">
-            <h3>Ready to Start Your Project?</h3>
-            <p>Let's turn your ideas into reality</p>
-            <a href="mailto:nafizk368@gmail.com" className="btn btn-outline">
-              Start a Conversation
-            </a>
-          </div>
-        </div> */}
 
         <div className="social-links">
           <h3>Connect With Me</h3>
           <div className="social-icons">
-            <a 
-              href="https://www.facebook.com/nafiz.khan.52687" 
+            <a
+              href="https://www.facebook.com/share/1B5896cUtx/"
               className="social-icon facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -231,8 +252,8 @@ export default function Contact() {
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
-            <a 
-              href="https://www.instagram.com/nafiz_khan_68" 
+            <a
+              href="https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr"
               className="social-icon instagram"
               target="_blank"
               rel="noopener noreferrer"

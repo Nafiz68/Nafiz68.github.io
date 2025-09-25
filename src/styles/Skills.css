@@ -64,6 +64,16 @@
   transform: translateY(50px);
 }
 
+[data-theme="light"] .skill-category {
+  background: var(--card-background);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .skill-category:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 768px) {
   .skill-category {
     padding: 1.5rem;
@@ -261,6 +271,10 @@
   fill: none;
   stroke: rgba(255, 255, 255, 0.1);
   stroke-width: 6;
+}
+
+[data-theme="light"] .progress-ring-circle-bg {
+  stroke: rgba(0, 0, 0, 0.1);
 }
 
 .progress-ring-circle {
