@@ -162,6 +162,12 @@
   border: 1px solid rgba(254, 202, 87, 0.4);
 }
 
+[data-theme="light"] .project-category {
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.1);
+  border: 1px solid rgba(180, 83, 9, 0.3);
+}
+
 .project-number {
   font-size: 1.5rem;
   font-weight: 800;
