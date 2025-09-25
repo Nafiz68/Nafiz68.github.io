@@ -140,7 +140,7 @@
 }
 
 .name-highlight {
-  background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #00f2fe);
+  background: linear-gradient(45deg, #3b82f6, #1e40af, #0ea5e9, #0891b2);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

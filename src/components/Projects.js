@@ -6,9 +6,8 @@ export default function Projects() {
     {
       title: "Thesis Management System",
       description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
-
       github: "https://github.com/Faishal-Monir/Thesis-Management-System",
-      demo: "https://github.com/Nafiz68/thesis-management",
+      // demo: "https://github.com/Nafiz68/thesis-management",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
@@ -23,7 +22,7 @@ export default function Projects() {
       title: "Software-Course-Management-System",
       description: " Web-based platform for managing university courses, allowing administrators to create courses, assign instructors, enroll students, and track academic progress.",
       github: "https://github.com/asiradnan/Software-Course-Management-System",
-      demo: "https://github.com/Nafiz68/hospital-management",
+      // demo: "https://github.com/Nafiz68/hospital-management",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
@@ -52,6 +51,11 @@ export default function Projects() {
 
   return (
     <section id="projects" className="projects-section">
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
       <div className="container">
         <div className="projects-header">
           <h2 className="projects-title">Featured Projects</h2>

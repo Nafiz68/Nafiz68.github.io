@@ -100,6 +100,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section">
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
       <div className="container">
         <div className="contact-header">
           <h2>Let's Work Together</h2>
@@ -209,9 +214,6 @@ export default function Contact() {
                 ) : (
                   <>
                     <span>Send Message</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                    </svg>
                   </>
                 )}
               </button>

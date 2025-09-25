@@ -86,6 +86,11 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills-section" ref={sectionRef}>
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
       <div className="container">
         <h2>Skills & Expertise</h2>
         <p className="section-subtitle">

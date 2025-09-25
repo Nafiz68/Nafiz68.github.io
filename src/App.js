@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import "./styles/App.css"; // global styles
@@ -24,6 +25,7 @@ function App() {
         <Skills />
         <Certificates />
         <Contact />
+        <Footer />
       </div>
     </ThemeProvider>
   );

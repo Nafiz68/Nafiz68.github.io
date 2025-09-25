@@ -39,6 +39,11 @@ const About = () => {
   
   return (
     <section id="about" className={`about-section ${isVisible ? 'animate' : ''}`}>
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
       <div className="container">
         <div className="about-header">
           <h2 className="section-title">About Me</h2>

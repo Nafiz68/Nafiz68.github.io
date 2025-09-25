@@ -70,6 +70,11 @@ const certificates = [
 
   return (
     <section id="certificates" className="certificates-section" ref={sectionRef}>
+      <div className="floating-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
       <div className="container">
         <h2>Certifications & Achievements</h2>
         <p className="section-subtitle">
