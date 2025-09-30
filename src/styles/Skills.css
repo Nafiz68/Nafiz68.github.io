@@ -294,6 +294,14 @@
   color: var(--text-primary);
 }
 
+[data-theme="light"] .circular-skills h3 {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: #1a67e4;
+}
+
 .circular-skills-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -340,7 +348,8 @@
 }
 
 [data-theme="light"] .progress-ring-circle-bg {
-  stroke: rgba(0, 0, 0, 0.1);
+  stroke: rgba(0, 0, 0, 0.15);
+  stroke-width: 8;
 }
 
 .progress-ring-circle {

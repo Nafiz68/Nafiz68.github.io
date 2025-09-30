@@ -34,15 +34,15 @@ export default function Skills() {
         { name: "MongoDB", level: 82, icon: "🍃" },
         { name: "Git/GitHub", level: 89, icon: "🐙" },
         { name: "VS Code", level: 93, icon: "💻" },
-        { name: "Postman", level: 86, icon: "📮" },
+        { name: "n8n", level: 67, icon: "⚙️" },
       ]
     },
     {
       category: "Specialized Areas",
       skills: [
-        { name: "Machine Learning", level: 83, icon: "🤖" },
-        { name: "Data Science", level: 81, icon: "📊" },
-        { name: "Competitive Programming", level: 87, icon: "🏆" },
+        { name: "Machine Learning", level: 63, icon: "🤖" },
+        { name: "Teaching/Tutoring", level: 81, icon: "👨‍🏫" },
+        { name: "Workflow Automation", level: 65, icon: "🔄" },
         { name: "AI Security / LLM Research", level: 85, icon: "🔐" },
         { name: "Web Development", level: 90, icon: "🌐" }
       ]

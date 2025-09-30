@@ -29,6 +29,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="experience" smooth={true} onClick={closeNav}>
+              Experience
+            </Link>
+          </li>
+          <li>
             <Link to="projects" smooth={true} onClick={closeNav}>
               Projects
             </Link>

@@ -47,7 +47,6 @@ const About = () => {
       <div className="container">
         <div className="about-header">
           <h2 className="section-title">About Me</h2>
-          <div className="title-underline"></div>
         </div>
 
         <div className="about-content">
@@ -61,7 +60,8 @@ const About = () => {
               </p>
               <p>
                 Today, I focus on building scalable web applications, implementing machine learning models, 
-                and exploring emerging technologies like blockchain. I thrive on solving complex problems 
+                and exploring emerging technologies like blockchain. Recently, I have also been learning workflow automation with n8n and creating AI agents, combining automation with intelligence to design practical, real-world solutions.
+                I thrive on solving complex problems 
                 and turning innovative ideas into functional, impactful software solutions.
               </p>
             </div>
@@ -100,9 +100,9 @@ const About = () => {
                   <p>Building end-to-end web applications using modern technologies like React, Node.js, and databases</p>
                 </div>
                 <div className="objective-item">
-                  <div className="objective-icon">🔧</div>
-                  <h4>Problem Solving</h4>
-                  <p>Analyzing complex problems and delivering elegant, efficient solutions</p>
+                  <div className="objective-icon">👨‍🏫</div>
+                  <h4>Tutoring & Teaching</h4>
+                  <p>Providing expert tutoring and teaching in data structures, algorithms, and programming concepts with hands-on guidance and academic support</p>
                 </div>
                 <div className="objective-item">
                   <div className="objective-icon">🤖</div>
@@ -110,9 +110,9 @@ const About = () => {
                   <p>Applying machine learning algorithms and data science techniques to solve real-world problems</p>
                 </div>
                 <div className="objective-item">
-                  <div className="objective-icon">⚡</div>
-                  <h4>Competitive Programming</h4>
-                  <p>Solving algorithmic challenges and participating in coding competitions to sharpen problem-solving skills</p>
+                  <div className="objective-icon">⚙️</div>
+                  <h4>AI Agents & Workflow Automation</h4>
+                  <p>Building intelligent workflow automation using n8n and creating AI agents that combine automation with intelligence for practical, real-world solutions</p>
                 </div>
               </div>
             </div>
