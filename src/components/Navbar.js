@@ -19,37 +19,93 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className={`nav-links ${navOpen ? "open" : ""}`}>
           <li>
-            <Link to="hero" smooth={true} onClick={closeNav}>
+            <Link 
+              to="hero" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="about" smooth={true} onClick={closeNav}>
+            <Link 
+              to="about" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link to="experience" smooth={true} onClick={closeNav}>
+            <Link 
+              to="experience" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Experience
             </Link>
           </li>
           <li>
-            <Link to="projects" smooth={true} onClick={closeNav}>
+            <Link 
+              to="projects" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="skills" smooth={true} onClick={closeNav}>
+            <Link 
+              to="skills" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Skills
             </Link>
           </li>
           <li>
-            <Link to="certificates" smooth={true} onClick={closeNav}>
+            <Link 
+              to="certificates" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Certificates
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} onClick={closeNav}>
+            <Link 
+              to="contact" 
+              smooth={true} 
+              spy={true}
+              activeClass="active"
+              offset={-100}
+              duration={500}
+              onClick={closeNav}
+            >
               Contact
             </Link>
           </li>

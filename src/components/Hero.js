@@ -12,7 +12,7 @@ export default function Hero() {
     'Full-Stack Developer',
     'Problem Solver',
     'Tech Enthusiast',
-    'Machine Learning Enthusiast',
+    'Workflow Automation Enthusiast',
   ], []);
 
   useEffect(() => {

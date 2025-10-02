@@ -30,7 +30,7 @@ const About = () => {
     // Direct download approach
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Nafiz_Khan_Resume.pdf';
+    link.download = 'CV_Nafiz_Khan_BSc_CSE.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

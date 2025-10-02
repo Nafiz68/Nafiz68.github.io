@@ -12,9 +12,9 @@
 }
 
 [data-theme="light"] .navbar {
-  background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
+  background: rgba(51, 65, 85, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 4px 20px rgba(51, 65, 85, 0.15);
 }
 
 .navbar.scrolled {
@@ -42,6 +42,10 @@
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+[data-theme="light"] .logo {
+  color: #f8fafc;
 }
 
 .nav-links {
@@ -85,6 +89,18 @@
   border-radius: 25px;
 }
 
+[data-theme="dark"] .nav-links a::before {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+[data-theme="light"] .nav-links a::before {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 197, 253, 0.4) 100%);
+}
+
+[data-theme="light"] .nav-links a::before {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 197, 253, 0.4) 100%);
+}
+
 .nav-links a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
@@ -93,6 +109,10 @@
 .nav-links a:hover {
   color: white;
   transform: translateY(-2px);
+}
+
+[data-theme="light"] .nav-links a {
+  color: #f8fafc;
 }
 
 [data-theme="light"] .nav-links a:hover {
@@ -106,6 +126,14 @@
 
 .nav-links a.active {
   color: white;
+}
+
+[data-theme="dark"] .nav-links a.active::before {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+[data-theme="light"] .nav-links a.active::before {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 197, 253, 0.4) 100%);
 }
 
 /* Mobile Menu */
@@ -187,9 +215,9 @@
   }
 
   [data-theme="light"] .nav-links {
-    background: linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(241, 245, 249, 0.98) 100%);
-    border-top: 1px solid rgba(59, 130, 246, 0.15);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.1);
+    background: rgba(51, 65, 85, 0.98);
+    border-top: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: 0 8px 25px rgba(51, 65, 85, 0.2);
   }
 
   .nav-links.open {
