@@ -1,5 +1,5 @@
 import React from "react";
-// import { Element } from "react-scroll";
+
 
 // Import your components
 import Navbar from "./components/Navbar";
