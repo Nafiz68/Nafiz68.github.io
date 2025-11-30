@@ -7,12 +7,21 @@ export default function Projects() {
       title: "Thesis Management System",
       description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
       github: "https://github.com/Faishal-Monir/Thesis-Management-System",
-      demo: "https://thesis-management-system-alpha.vercel.app/",
+      demo: "https://thesis-management-system-final.vercel.app/",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
     {
-      title: " VaDE —Variational Deep Embedding for Face Clustering",
+      title: "TrackUp — Job Application Management Platform",
+      description: "A full-featured platform for tracking job applications, AI-powered resume parsing, smart reminders, analytics, and job insights extracted from publicly available listings using NLP.",
+      github: "https://github.com/Nafiz68/TrackUp", 
+      demo: "https://trackup-job-tracker.vercel.app/",  
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Socket.IO", "Docker"],
+      category: "Full Stack / AI"
+    }
+    ,
+    {
+      title: " VaDE — Variational Deep Embedding for Face Clustering",
       description: "Deep clustering implementation on Olivetti Faces dataset using Bayesian Deep Clustering Networks (BDCN) with advanced statistical methods.",
       github: "https://github.com/Nafiz68/Variational-Deep-Embedding-VaDE-for-Face-Clustering",
       tech: ["Python", "PyTorch", "Scikit-learn", "NumPy"],
@@ -33,13 +42,13 @@ export default function Projects() {
       tech: ["Solidity", "Ethereum", "Web3.js", "Ganache"],
       category: "Blockchain / Dapp"
     },
-    {
-      title: " The Science of Cinema: Predicting Movie Ratings",
-      description: "Implemented machine learning models to predict movie ratings based on various features, analyzing data from multiple sources.",
-      github: "https://github.com/Nafiz68/The-Science-of-Cinema-Predicting-Movie-Ratings-Through-Data",
-      tech: ["Python", "Pandas", "Scikit-learn", "NumPy"],
-      category: "Machine Learning"
-    },
+    // {
+    //   title: " The Science of Cinema: Predicting Movie Ratings",
+    //   description: "Implemented machine learning models to predict movie ratings based on various features, analyzing data from multiple sources.",
+    //   github: "https://github.com/Nafiz68/The-Science-of-Cinema-Predicting-Movie-Ratings-Through-Data",
+    //   tech: ["Python", "Pandas", "Scikit-learn", "NumPy"],
+    //   category: "Machine Learning"
+    // },
     {
       title: " BlockProperty — Decentralized Property Registry on Hyperledger Fabric",
       description: "Blockchain-based property registry system ensuring transparent, secure, and tamper-proof land ownership records.",

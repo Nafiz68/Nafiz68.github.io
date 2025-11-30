@@ -6,48 +6,91 @@ export default function Skills() {
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
 
+  // const skillCategories = [
+  //   {
+  //     category: "Programming Languages",
+  //     skills: [
+  //       { name: "Python", level: 90, icon: "🐍" },
+  //       { name: "C", level: 65, icon: "⚙️" },
+  //       { name: "JavaScript", level: 77, icon: "🟨" },
+  //       { name: "HTML", level: 82, icon: "🎨" },
+  //       { name: "CSS", level: 78, icon: "🌐" },
+  //     ]
+  //   },
+  //   {
+  //     category: "Frameworks & Technologies",
+  //     skills: [
+  //       { name: "React", level: 69, icon: "⚛️" },
+  //       { name: "Node.js", level: 66, icon: "🟢" },
+  //       { name: "Express.js", level: 63, icon: "⚡" },
+  //       { name: "Next.js", level: 79, icon: "▲" },
+  //       { name: "Tailwind CSS", level: 55, icon: "🎯" }
+  //     ]
+  //   },
+  //   {
+  //     category: "Databases & Tools",
+  //     skills: [
+  //       { name: "MySQL", level: 84, icon: "🗄️" },
+  //       { name: "MongoDB", level: 82, icon: "🍃" },
+  //       { name: "Git/GitHub", level: 89, icon: "🐙" },
+  //       { name: "VS Code", level: 93, icon: "💻" },
+  //       { name: "n8n", level: 67, icon: "⚙️" },
+  //     ]
+  //   },
+  //   {
+  //     category: "Specialized Areas",
+  //     skills: [
+  //       { name: "Machine Learning", level: 63, icon: "🤖" },
+  //       { name: "Teaching/Tutoring", level: 81, icon: "👨‍🏫" },
+  //       { name: "Workflow Automation", level: 65, icon: "🔄" },
+  //       { name: "AI Security / LLM Research", level: 85, icon: "🔐" },
+  //       { name: "Web Development", level: 90, icon: "🌐" }
+  //     ]
+  //   }
+  // ];
   const skillCategories = [
-    {
-      category: "Programming Languages",
-      skills: [
-        { name: "Python", level: 90, icon: "🐍" },
-        { name: "C", level: 65, icon: "⚙️" },
-        { name: "JavaScript", level: 77, icon: "🟨" },
-        { name: "HTML", level: 82, icon: "🎨" },
-        { name: "CSS", level: 78, icon: "🌐" },
-      ]
-    },
-    {
-      category: "Frameworks & Technologies",
-      skills: [
-        { name: "React", level: 69, icon: "⚛️" },
-        { name: "Node.js", level: 66, icon: "🟢" },
-        { name: "Express.js", level: 63, icon: "⚡" },
-        { name: "Next.js", level: 79, icon: "▲" },
-        { name: "Tailwind CSS", level: 55, icon: "🎯" }
-      ]
-    },
-    {
-      category: "Databases & Tools",
-      skills: [
-        { name: "MySQL", level: 84, icon: "🗄️" },
-        { name: "MongoDB", level: 82, icon: "🍃" },
-        { name: "Git/GitHub", level: 89, icon: "🐙" },
-        { name: "VS Code", level: 93, icon: "💻" },
-        { name: "n8n", level: 67, icon: "⚙️" },
-      ]
-    },
-    {
-      category: "Specialized Areas",
-      skills: [
-        { name: "Machine Learning", level: 63, icon: "🤖" },
-        { name: "Teaching/Tutoring", level: 81, icon: "👨‍🏫" },
-        { name: "Workflow Automation", level: 65, icon: "🔄" },
-        { name: "AI Security / LLM Research", level: 85, icon: "🔐" },
-        { name: "Web Development", level: 90, icon: "🌐" }
-      ]
-    }
-  ];
+  {
+    category: "Programming Languages",
+    skills: [
+      { name: "Python", level: 90, icon: "🐍" },
+      { name: "JavaScript", level: 85, icon: "🟨" },
+      { name: "C", level: 65, icon: "⚙️" },
+      { name: "Solidity", level: 55, icon: "🔗" },
+      { name: "SQL", level: 70, icon: "🗄️" }
+    ]
+  },
+  {
+    category: "Frameworks & Technologies",
+    skills: [
+      { name: "React", level: 82, icon: "⚛️" },
+      { name: "Next.js", level: 84, icon: "▲" },
+      { name: "Node.js", level: 78, icon: "🟢" },
+      { name: "Express.js", level: 75, icon: "⚡" },
+      { name: "PyTorch", level: 76, icon: "🔥" }
+    ]
+  },
+  {
+    category: "Databases & Tools",
+    skills: [
+      { name: "MongoDB", level: 84, icon: "🍃" },
+      { name: "MySQL", level: 72, icon: "🗄️" },
+      { name: "Git/GitHub", level: 91, icon: "🐙" },
+      { name: "Docker", level: 62, icon: "🐳" },
+      { name: "n8n", level: 55, icon: "🔧" }
+    ]
+  },
+  {
+    category: "Specialized Areas",
+    skills: [
+      { name: "Web Development", level: 92, icon: "🌐" },
+      { name: "Machine Learning", level: 70, icon: "🤖" },
+      { name: "AI Security / LLM Research", level: 87, icon: "🔐" },
+      { name: "Blockchain Development", level: 78, icon: "⛓️" },
+      { name: "Workflow Automation", level: 72, icon: "🔄" }
+    ]
+  }
+];
+
 
   useEffect(() => {
     // Check if device is mobile for better animation handling
