@@ -36,7 +36,7 @@ const About = () => {
     document.body.removeChild(link);
   };
 
-  
+
   return (
     <section id="about" className={`about-section ${isVisible ? 'animate' : ''}`}>
       <div className="floating-shapes">
@@ -54,14 +54,14 @@ const About = () => {
             <div className="story-card">
               <h3>My Story</h3>
               <p>
-                My journey in technology began with competitive programming, where I developed strong 
-                analytical thinking and algorithm design skills. This foundation led me to explore 
+                My journey in technology began with competitive programming, where I developed strong
+                analytical thinking and algorithm design skills. This foundation led me to explore
                 full-stack development, where I discovered my passion for creating end-to-end solutions.
               </p>
               <p>
-                Today, I focus on building scalable web applications, implementing machine learning models, 
+                Today, I focus on building scalable web applications, implementing machine learning models,
                 and exploring emerging technologies like blockchain. Recently, I have also been learning workflow automation with n8n and creating AI agents, combining automation with intelligence to design practical, real-world solutions.
-                I thrive on solving complex problems 
+                I thrive on solving complex problems
                 and turning innovative ideas into functional, impactful software solutions.
               </p>
             </div>
@@ -75,21 +75,21 @@ const About = () => {
                   <p>BRAC University • 2022-2026</p>
                 </div>
               </div>
-              
+
               <div className="achievements">
                 <h4>Key Achievements</h4>
-                  <ul>
-                    <li>🎯 Solved 150+ problems across various competitive programming platforms</li>
-                    <li>💻 Developed multiple full-stack web applications with scalable backend and RESTful APIs</li>
-                    {/* <li>🔐 Conducted research on adversarial attacks against LLMs, proposing novel defense mechanisms</li> */}
-                    <li>📊 Implemented machine learning models for real-world datasets, improving prediction accuracy</li>
-                  </ul>
+                <ul>
+                  <li>2nd Runner-up | BRAC CSE471 Project Showcase (Summer 2025)</li>
+                  <li>🎯 Solved 150+ problems across various competitive programming platforms</li>
+                  <li>💻 Developed multiple full-stack web applications with scalable backend and RESTful APIs</li>
+                  <li>📊 Implemented machine learning models for real-world datasets, improving prediction accuracy</li>
+                </ul>
 
               </div>
             </div>
           </div>
 
-          
+
           <div className="career-objectives">
             <div className="objectives-card">
               <h3>What I Do</h3>
@@ -122,8 +122,8 @@ const About = () => {
             <div className="cv-card">
               <h3>Want to know more?</h3>
               <p>Download my complete resume for detailed information about my experience and projects.</p>
-              <button 
-                className="cv-button" 
+              <button
+                className="cv-button"
                 onClick={handleDownloadCV}
                 style={{
                   background: 'linear-gradient(45deg, #ff6b6b, #feca57)',
