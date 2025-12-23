@@ -79,7 +79,7 @@ const About = () => {
               <div className="achievements">
                 <h4>Key Achievements</h4>
                 <ul>
-                  <li>2nd Runner-up | BRAC CSE471 Project Showcase (Summer 2025)</li>
+                  <li>🏆 2nd Runner-up | BRAC CSE471 Project Showcase (Summer 2025)</li>
                   <li>🎯 Solved 150+ problems across various competitive programming platforms</li>
                   <li>💻 Developed multiple full-stack web applications with scalable backend and RESTful APIs</li>
                   <li>📊 Implemented machine learning models for real-world datasets, improving prediction accuracy</li>
