@@ -7,7 +7,7 @@ export default function Projects() {
       title: "Thesis Management System",
       description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
       github: "https://github.com/Faishal-Monir/Thesis-Management-System",
-      demo: "https://thesis-management-system-final.vercel.app/",
+      demo: "https://thesis-flow-delta.vercel.app/",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
     },
