@@ -57,7 +57,23 @@ const Experience = () => {
       ],
       icon: "💻",
       color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+    },
+    {
+      id: 3,
+      position: "Undergraduate Researcher",
+      company: "BRAC University – CSE Department",
+      location: "Dhaka, Bangladesh",
+      duration: "Jan 2025 – Jan 2026",
+      type: "Research / AI & ML",
+      responsibilities: [
+        "Developed an anchor-guided weight repair mechanism to stabilize compromised pretrained language models.",
+        "Enhanced model robustness against quantization and weight noise attacks without retraining.",
+        "Documented methodology and results for potential publication and academic presentations."
+      ],
+      icon: "🔬",
+      color: "linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%)"
     }
+
   ];
 
   return (
@@ -72,9 +88,7 @@ const Experience = () => {
         <div className="experience-header">
           <h2 className="section-title">Professional Experience</h2>
           <div className="title-underline"></div>
-          <p className="section-subtitle">
-            Building expertise through hands-on teaching and mentoring in technology education
-          </p>
+          
         </div>
 
         <div className="experience-timeline">
@@ -118,15 +132,7 @@ const Experience = () => {
                   </ul>
                 </div>
 
-                <div className="card-footer">
-                  <div className="skills-tag">
-                    <span>Python</span>
-                    <span>Data Structures</span>
-                    <span>Computer Graphics</span>
-                    <span>OpenGL</span>
-                    <span>Teaching</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
           ))}

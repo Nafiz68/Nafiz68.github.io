@@ -4,28 +4,35 @@ import '../styles/Projects.css';
 export default function Projects() {
   const projects = [
     {
-      title: "Thesis Management System",
-      description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
-      github: "https://github.com/Faishal-Monir/Thesis-Management-System",
-      demo: "https://thesis-flow-delta.vercel.app/",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-      category: "Full Stack"
-    },
-    {
-      title: "TrackUp — Job Application Management Platform",
+      title: "TrackUp",
       description: "A full-featured platform for tracking job applications, AI-powered resume parsing, smart reminders, analytics, and job insights extracted from publicly available listings using NLP.",
       github: "https://github.com/Nafiz68/TrackUp", 
       demo: "https://trackup-job-tracker.vercel.app/",  
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Socket.IO", "Docker"],
-      category: "Full Stack / AI"
-    }
-    ,
+      category: "Full Stack"
+    },
     {
-      title: " VaDE — Variational Deep Embedding for Face Clustering",
-      description: "Deep clustering implementation on Olivetti Faces dataset using Bayesian Deep Clustering Networks (BDCN) with advanced statistical methods.",
-      github: "https://github.com/Nafiz68/Variational-Deep-Embedding-VaDE-for-Face-Clustering",
-      tech: ["Python", "PyTorch", "Scikit-learn", "NumPy"],
-      category: "Machine Learning"
+      title: "ThesisFlow",
+      description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
+      github: "https://github.com/Faishal-Monir/Thesis-Management-System",
+      demo: "https://thesis-flow-delta.vercel.app/",
+      tech: ["MongoDB", "Express.js", "React.js", "Node.js (MERN stack)", "HTML", "CSS"],
+      category: "Full Stack"
+    },
+    {
+      title: "Due Diligence Agent",
+      description: " AI-powered full-stack system that automates due diligence questionnaires using document indexing, semantic search, and LLM-based answer generation with citations and human review.",
+      github: "https://github.com/Nafiz68/Due-Diligence-Agent",
+      tech: ["Node.js", "Express", "MongoDB", "Redis", "ChromaDB", "Groq (LLaMA 3.1)", "HuggingFace", "React", "TypeScript"],
+      category: "Full Stack / AI"
+    },
+    {
+      title: "Sweet Shop",
+      description: " a full-stack e-commerce platform for a sweet shop with shopping cart, secure payment processing, order tracking, fraud prevention, and admin panel for product management.",
+      github: "https://github.com/Nafiz68/sweet-shop-api",
+      demo: "https://sweet-shop-api-ivory.vercel.app/",
+      tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
+      category: "Full Stack"
     },
     {
       title: "Software-Course-Management-System",
@@ -34,6 +41,13 @@ export default function Projects() {
       // demo: "https://github.com/Nafiz68/hospital-management",
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
+    },
+    {
+      title: " VaDE — Variational Deep Embedding for Face Clustering",
+      description: "Deep clustering implementation on Olivetti Faces dataset using Bayesian Deep Clustering Networks (BDCN) with advanced statistical methods.",
+      github: "https://github.com/Nafiz68/Variational-Deep-Embedding-VaDE-for-Face-Clustering",
+      tech: ["Python", "PyTorch", "Scikit-learn", "NumPy"],
+      category: "Machine Learning"
     },
     {
       title: " DisasterGuard DApp — Blockchain Disaster Recovery Training Platform",
@@ -55,6 +69,14 @@ export default function Projects() {
       github: "https://github.com/Nafiz68/BlockProperty---Decentralized-Property-Registry-on-Hyperledger-Fabric",
       tech: [" Hyperledger Fabric", "Node.js", " Docker", "Smart Contracts (Chaincode)"],
       category: "Blockchain"
+    },
+    {
+      title: "Realtime Collaborative Playlist",
+      description: " a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
+      github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
+      demo: "https://realtime-collaborative-playlist.vercel.app/",
+      tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
+      category: "Full Stack"
     }
   ];
 
