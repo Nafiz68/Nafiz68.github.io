@@ -35,11 +35,11 @@ export default function Projects() {
       category: "Full Stack"
     },
     {
-      title: "Software-Course-Management-System",
-      description: " Web-based platform for managing university courses, allowing administrators to create courses, assign instructors, enroll students, and track academic progress.",
-      github: "https://github.com/asiradnan/Software-Course-Management-System",
-      // demo: "https://github.com/Nafiz68/hospital-management",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      title: "Realtime Collaborative Playlist",
+      description: " a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
+      github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
+      demo: "https://realtime-collaborative-playlist.vercel.app/",
+      tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
       category: "Full Stack"
     },
     {
@@ -71,13 +71,14 @@ export default function Projects() {
       category: "Blockchain"
     },
     {
-      title: "Realtime Collaborative Playlist",
-      description: " a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
-      github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
-      demo: "https://realtime-collaborative-playlist.vercel.app/",
-      tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
+      title: "Software-Course-Management-System",
+      description: " Web-based platform for managing university courses, allowing administrators to create courses, assign instructors, enroll students, and track academic progress.",
+      github: "https://github.com/asiradnan/Software-Course-Management-System",
+      // demo: "https://github.com/Nafiz68/hospital-management",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       category: "Full Stack"
-    }
+    },
+    
   ];
 
   return (

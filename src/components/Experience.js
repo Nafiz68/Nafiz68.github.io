@@ -72,6 +72,20 @@ const Experience = () => {
       ],
       icon: "🔬",
       color: "linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%)"
+    },
+    {
+      id: 4,
+      position: "Executive, Network & IT (Intern)",
+      company: "Wintel Limited",
+      location: "Dhaka, Bangladesh",
+      duration: "Dec 2025 – Feb 2026",
+      type: "Internship",
+      responsibilities: [
+        "Supported network infrastructure maintenance and IT operations within the Technical Team.",
+        "Assisted in troubleshooting, system monitoring, and technical documentation."
+      ],
+      icon: "🌐",
+      color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     }
 
   ];
