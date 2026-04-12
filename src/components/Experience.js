@@ -75,7 +75,7 @@ const Experience = () => {
     },
     {
       id: 4,
-      position: "Executive, Network & IT (Intern)",
+      position: "Executive, Network & IT",
       company: "Wintel Limited",
       location: "Dhaka, Bangladesh",
       duration: "Dec 2025 – Feb 2026",
@@ -85,6 +85,20 @@ const Experience = () => {
         "Assisted in troubleshooting, system monitoring, and technical documentation."
       ],
       icon: "🌐",
+      color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+    },
+    {
+      id: 5,
+      position: "Automation Specialist",
+      company: "Softvence",
+      location: "Dhaka, Bangladesh",
+      duration: "Apr 26 – Present",
+      type: "Full Time",
+      responsibilities: [
+        "Design and deploy automation workflows using n8n based on client requirements.",
+        "Build API integrations and AI-driven automations with testing and optimization."
+      ],
+      icon: "💼",
       color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     }
 

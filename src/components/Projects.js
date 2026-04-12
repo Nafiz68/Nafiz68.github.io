@@ -28,7 +28,7 @@ export default function Projects() {
     },
     {
       title: "Sweet Shop",
-      description: " a full-stack e-commerce platform for a sweet shop with shopping cart, secure payment processing, order tracking, fraud prevention, and admin panel for product management.",
+      description: "A full-stack e-commerce platform for a sweet shop with shopping cart, secure payment processing, order tracking, fraud prevention, and admin panel for product management.",
       github: "https://github.com/Nafiz68/sweet-shop-api",
       demo: "https://sweet-shop-api-ivory.vercel.app/",
       tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
@@ -36,7 +36,7 @@ export default function Projects() {
     },
     {
       title: "Realtime Collaborative Playlist",
-      description: " a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
+      description: "A real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
       github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
       demo: "https://realtime-collaborative-playlist.vercel.app/",
       tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
