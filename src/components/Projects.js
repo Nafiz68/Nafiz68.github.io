@@ -11,17 +11,10 @@ export default function Projects() {
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Socket.IO", "Docker"],
       category: "Full Stack",
       status: "Completed",
-      duration: "4 months"
-    },
-    {
-      title: "ThesisFlow",
-      description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
-      github: "https://github.com/Faishal-Monir/Thesis-Management-System",
-      demo: "https://thesis-flow-delta.vercel.app/",
-      tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Groq(LLaMA 3.1)"],
-      category: "Full Stack",
-      status: "Completed",
-      duration: "3 months"
+      duration: "4 months",
+      image: "/images/projects/trackup.png",
+      centerImage: true,
+      zoomOut: true
     },
     {
       title: "Credenza",
@@ -31,8 +24,22 @@ export default function Projects() {
       tech: ["Next.js", "React", "Node.js", "Prisma", "PostgreSQL", "Web Crypto API",],
       category: "Full Stack / Cybersecurity",
       status: "Completed",
-      duration: "1 month"
+      duration: "1 month",
+      image: "/images/projects/credenza.png"
     },
+    {
+      title: "ThesisFlow",
+      description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
+      github: "https://github.com/Faishal-Monir/Thesis-Management-System",
+      demo: "https://thesis-flow-delta.vercel.app/",
+      tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Groq(LLaMA 3.1)"],
+      category: "Full Stack",
+      status: "Completed",
+      duration: "3 months",
+      image: "/images/projects/thesisflow.png",
+      zoomOut: true
+    },
+    
     
     {
       title: "Due Diligence Agent",
@@ -41,7 +48,21 @@ export default function Projects() {
       tech: ["Node.js", "Express", "MongoDB", "Redis", "ChromaDB", "Groq (LLaMA 3.1)", "HuggingFace", "React", "TypeScript"],
       category: "Full Stack / AI",
       status: "Completed",
-      duration: "5 months"
+      duration: "5 months",
+      image: "/images/projects/due-dilligence.png",
+      centerImage: true,
+      zoomOut: true
+    },
+    {
+      title: "QuickHire",
+      description: "A modern full-stack job board that makes job hunting simple and beautiful, featuring smart search and filters, saved jobs, direct applications, application tracking, and employer tools for posting and managing listings.",
+      github: "https://github.com/Nafiz68/QuickHire",
+      demo: "https://quick-hire-qtec-sol.vercel.app/",
+      tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB", "Three.js"],
+      category: "Full Stack",
+      status: "Completed",
+      duration: "2 months",
+      image: "/images/projects/quickhire.png"
     },
     {
       title: "Sweet Shop",
@@ -51,7 +72,8 @@ export default function Projects() {
       tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
       category: "Full Stack",
       status: "Completed",
-      duration: "1 month"
+      duration: "1 month",
+      image: "/images/projects/sweetshop.png"
     },
     {
       title: "Realtime Collaborative Playlist",
@@ -61,35 +83,31 @@ export default function Projects() {
       tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
       category: "Full Stack",
       status: "Completed",
-      duration: "2 months"
+      duration: "2 months",
+      image: "/images/projects/realtime.png",
+      centerImage: true,
+      zoomOut: true
+
     },
-    {
-      title: " VaDE — Variational Deep Embedding for Face Clustering",
-      description: "Deep clustering implementation on Olivetti Faces dataset using Bayesian Deep Clustering Networks (BDCN) with advanced statistical methods.",
-      github: "https://github.com/Nafiz68/Variational-Deep-Embedding-VaDE-for-Face-Clustering",
-      tech: ["Python", "PyTorch", "Scikit-learn", "NumPy"],
-      category: "Machine Learning",
-      status: "Completed",
-      duration: "2 months"
-    },
-    {
-      title: " DisasterGuard DApp — Blockchain Disaster Recovery Training Platform",
-      description: " Built a decentralized application (DApp) for training and awareness in disaster recovery, leveraging blockchain for secure certification and training records.",
-      github: "https://github.com/Nafiz68/DisasterGuard-DApp---Blockchain-Disaster-Recovery-Training-Platform",
-      tech: ["Solidity", "Ethereum", "Web3.js", "Ganache"],
-      category: "Blockchain / Dapp",
-      status: "Completed",
-      duration: "2 months"
-    },
-    {
-      title: " BlockProperty — Decentralized Property Registry on Hyperledger Fabric",
-      description: "Blockchain-based property registry system ensuring transparent, secure, and tamper-proof land ownership records.",
-      github: "https://github.com/Nafiz68/BlockProperty---Decentralized-Property-Registry-on-Hyperledger-Fabric",
-      tech: [" Hyperledger Fabric", "Node.js", " Docker", "Smart Contracts (Chaincode)"],
-      category: "Blockchain",
-      status: "Completed",
-      duration: "3 months"
-    }
+    
+    // {
+    //   title: " DisasterGuard DApp — Blockchain Disaster Recovery Training Platform",
+    //   description: " Built a decentralized application (DApp) for training and awareness in disaster recovery, leveraging blockchain for secure certification and training records.",
+    //   github: "https://github.com/Nafiz68/DisasterGuard-DApp---Blockchain-Disaster-Recovery-Training-Platform",
+    //   tech: ["Solidity", "Ethereum", "Web3.js", "Ganache"],
+    //   category: "Blockchain / Dapp",
+    //   status: "Completed",
+    //   duration: "2 months"
+    // },
+    // {
+    //   title: " BlockProperty — Decentralized Property Registry on Hyperledger Fabric",
+    //   description: "Blockchain-based property registry system ensuring transparent, secure, and tamper-proof land ownership records.",
+    //   github: "https://github.com/Nafiz68/BlockProperty---Decentralized-Property-Registry-on-Hyperledger-Fabric",
+    //   tech: [" Hyperledger Fabric", "Node.js", " Docker", "Smart Contracts (Chaincode)"],
+    //   category: "Blockchain",
+    //   status: "Completed",
+    //   duration: "3 months"
+    // }
     
   ];
 
@@ -160,7 +178,7 @@ export default function Projects() {
                   <img
                     src={project.image}
                     alt={project.title.trim()}
-                    className="project-preview-image"
+                    className={`project-preview-image ${project.centerImage ? 'project-preview-image-centered' : ''} ${project.zoomOut ? 'project-preview-image-zoomout' : ''}`.trim()}
                   />
                 ) : (
                   <div className="project-placeholder">
