@@ -116,7 +116,9 @@ const Experience = () => {
         <div className="experience-header">
           <h2 className="section-title">Professional Experience</h2>
           <div className="title-underline"></div>
-          
+          <p className="section-subtitle">
+            Roles that shaped my engineering mindset across teaching, research, and production automation.
+          </p>
         </div>
 
         <div className="experience-timeline">
@@ -137,6 +139,7 @@ const Experience = () => {
               <div className="experience-card">
                 <div className="card-header">
                   <div className="position-info">
+                    <span className="entry-number">#{String(index + 1).padStart(2, '0')}</span>
                     <h3 className="position-title">{exp.position}</h3>
                     <div className="company-info">
                       <span className="company-name">{exp.company}</span>
