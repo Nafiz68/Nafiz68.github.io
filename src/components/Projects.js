@@ -18,11 +18,22 @@ export default function Projects() {
       description: "Developed a web-based platform to streamline thesis submission, progress tracking, and supervision for students and faculty",
       github: "https://github.com/Faishal-Monir/Thesis-Management-System",
       demo: "https://thesis-flow-delta.vercel.app/",
-      tech: ["MongoDB", "Express.js", "React.js", "Node.js (MERN stack)", "HTML", "CSS"],
+      tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Groq(LLaMA 3.1)"],
       category: "Full Stack",
       status: "Completed",
       duration: "3 months"
     },
+    {
+      title: "Credenza",
+      description: " Client-side, zero-knowledge credential vault utilizing Web Crypto API (PBKDF2 + AES-GCM) for secure local encryption, with an integrated encrypted reconnaissance tracker for managing cybersecurity data and insights.",
+      github: "https://github.com/Nafiz68/Credenza",
+      demo: "https://credenza-secure-vault.vercel.app/",
+      tech: ["Next.js", "React", "Node.js", "Prisma", "PostgreSQL", "Web Crypto API",],
+      category: "Full Stack / Cybersecurity",
+      status: "Completed",
+      duration: "1 month"
+    },
+    
     {
       title: "Due Diligence Agent",
       description: " AI-powered full-stack system that automates due diligence questionnaires using document indexing, semantic search, and LLM-based answer generation with citations and human review.",
@@ -40,7 +51,7 @@ export default function Projects() {
       tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
       category: "Full Stack",
       status: "Completed",
-      duration: "2 months"
+      duration: "1 month"
     },
     {
       title: "Realtime Collaborative Playlist",
@@ -70,13 +81,6 @@ export default function Projects() {
       status: "Completed",
       duration: "2 months"
     },
-    // {
-    //   title: " The Science of Cinema: Predicting Movie Ratings",
-    //   description: "Implemented machine learning models to predict movie ratings based on various features, analyzing data from multiple sources.",
-    //   github: "https://github.com/Nafiz68/The-Science-of-Cinema-Predicting-Movie-Ratings-Through-Data",
-    //   tech: ["Python", "Pandas", "Scikit-learn", "NumPy"],
-    //   category: "Machine Learning"
-    // },
     {
       title: " BlockProperty — Decentralized Property Registry on Hyperledger Fabric",
       description: "Blockchain-based property registry system ensuring transparent, secure, and tamper-proof land ownership records.",
@@ -85,17 +89,7 @@ export default function Projects() {
       category: "Blockchain",
       status: "Completed",
       duration: "3 months"
-    },
-    {
-      title: "Software-Course-Management-System",
-      description: " Web-based platform for managing university courses, allowing administrators to create courses, assign instructors, enroll students, and track academic progress.",
-      github: "https://github.com/asiradnan/Software-Course-Management-System",
-      // demo: "https://github.com/Nafiz68/hospital-management",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-      category: "Full Stack",
-      status: "Completed",
-      duration: "3 months"
-    },
+    }
     
   ];
 
