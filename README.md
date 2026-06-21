@@ -1,4 +1,4 @@
-![System Overlay](./Screenshot.png)
+![System Overlay](./Screenshot1.png)
 
 # Getting Started with Create React App
 
