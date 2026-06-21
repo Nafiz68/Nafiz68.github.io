@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Contact.css';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // Using Formspree for form submission
+      // Formspree integration
       const response = await fetch('https://formspree.io/f/xvgwgzyp', {
         method: 'POST',
         headers: {
@@ -56,218 +56,222 @@ export default function Contact() {
     }
   };
 
-  const contactInfo = [
+  const contactMethods = [
     {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.9.732-1.636 1.636-1.636h.045L12 10.545l10.319-6.724h.045A1.636 1.636 0 0 1 24 5.457z"/>
-        </svg>
-      ),
+      icon: <FaEnvelope className="w-5 h-5" />,
       title: "Email",
       value: "nafizk368@gmail.com",
-      link: "nafizk368@gmail.com"
+      link: "mailto:nafizk368@gmail.com"
     },
     {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
-      ),
-      title: "LinkedIn",
-      value: "linkedin.com/in/nafiz-khan",
-      link: "https://www.linkedin.com/in/nafiz-khan-34b7a6309"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-        </svg>
-      ),
-      title: "GitHub",
-      value: "github.com/Nafiz68",
-      link: "https://github.com/Nafiz68"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-      ),
+      icon: <FaPhone className="w-5 h-5" />,
       title: "Phone Number",
-      value: "+8801317266368"
+      value: "+8801317266368",
+      link: "tel:+8801317266368"
+    },
+    {
+      icon: <FaMapMarkerAlt className="w-5 h-5" />,
+      title: "Location",
+      value: "Dhaka, Bangladesh",
+      link: "https://maps.google.com/?q=Dhaka,Bangladesh"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: <FaGithub className="w-5 h-5" />,
+      url: "https://github.com/Nafiz68",
+      label: "GitHub"
+    },
+    {
+      icon: <FaLinkedin className="w-5 h-5" />,
+      url: "https://www.linkedin.com/in/nafiz-khan-34b7a6309",
+      label: "LinkedIn"
+    },
+    {
+      icon: <FaFacebook className="w-5 h-5" />,
+      url: "https://www.facebook.com/share/1B5896cUtx/",
+      label: "Facebook"
+    },
+    {
+      icon: <FaInstagram className="w-5 h-5" />,
+      url: "https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr",
+      label: "Instagram"
     }
   ];
 
   return (
-    <section id="contact" className="contact-section">
-      <div className="floating-shapes">
-        <div className="shape shape-1"></div>
-        <div className="shape shape-2"></div>
-        <div className="shape shape-3"></div>
-      </div>
-      <div className="container">
-        <div className="contact-header">
-          <h2>Let's Work Together</h2>
-          <p className="section-subtitle">
-            Have a project in mind? Let's discuss how we can bring your ideas to life. 
-            I'm always excited to take on new challenges and collaborate on innovative solutions.
-          </p>
+    <section id="contact" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+      
+      {/* Header */}
+      <div className="text-center mb-20">
+        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
+          CONNECT
         </div>
+        <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Let's Work Together</h2>
+        <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest max-w-md mx-auto">
+          Have a project in mind or want to collaborate? I'm always open to new opportunities.
+        </p>
+      </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
-            <div className="contact-info-card">
-              <h3>Get In Touch</h3>
-              <p>
-                I'm currently looking for new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll try my best 
-                to get back to you!
-              </p>
-              
-              <div className="contact-methods">
-                {contactInfo.map((info, idx) => (
-                  <a 
-                    key={idx} 
-                    href={info.link} 
-                    className="contact-method"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="contact-icon">{info.icon}</span>
-                    <div className="contact-details">
-                      <h4>{info.title}</h4>
-                      <p>{info.value}</p>
-                    </div>
-                    <svg className="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-                    </svg>
-                  </a>
-                ))}
-              </div>
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        
+        {/* Info Column */}
+        <div className="space-y-8">
+          <div>
+            <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold mb-4">
+              Get In Touch
+            </h3>
+            <p className="font-body-md text-body-md text-on-surface-variant dark:text-surface-container-highest leading-relaxed max-w-md">
+              Whether you have a question about my work, need assistance with Python algorithms or full-stack projects, or want to discuss automation pipelines, feel free to reach out!
+            </p>
+          </div>
+
+          {/* Contact Details List */}
+          <div className="space-y-4">
+            {contactMethods.map((method, idx) => (
+              <a 
+                key={idx}
+                href={method.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-on-surface-variant dark:text-surface-container-highest hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 group cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/5 dark:bg-inverse-primary/5 flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-105 transition-transform">
+                  {method.icon}
+                </div>
+                <div>
+                  <h4 className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest uppercase tracking-wider">{method.title}</h4>
+                  <p className="font-body-md text-body-md text-on-surface dark:text-white font-bold text-sm">{method.value}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Social Links */}
+          <div className="pt-6 border-t border-surface-variant/30">
+            <h4 className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest uppercase tracking-wider mb-4">Social Handles</h4>
+            <div className="flex gap-4">
+              {socialLinks.map((social, idx) => (
+                <a 
+                  key={idx} 
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-11 h-11 rounded-lg bg-white dark:bg-[#191c1e] flex items-center justify-center border border-outline-variant/30 text-secondary dark:text-surface-container-highest hover:text-primary dark:hover:text-inverse-primary hover:border-primary/50 dark:hover:border-inverse-primary/50 hover:scale-105 transition-all soft-shadow cursor-pointer"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
-
-          <div className="contact-form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder="Let's collaborate on..."
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="6"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit" 
-                className={`btn btn-primary submit-btn ${isSubmitting ? 'loading' : ''}`}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <span className="loading-spinner"></span>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-
-              {submitStatus === 'success' && (
-                <div className="submit-success">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                  Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="submit-error">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-                  </svg>
-                  Failed to send message. Please try again or email me directly.
-                </div>
-              )}
-            </form>
-          </div>
         </div>
 
+        {/* Form Column */}
+        <div className="bg-white dark:bg-[#191c1e] p-8 rounded-xl border border-outline-variant/30 soft-shadow">
+          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+            
+            <div className="flex flex-col gap-2">
+              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="name">Your Name</label>
+              <input 
+                type="text" 
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="John Doe"
+                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
+              />
+            </div>
 
-        <div className="social-links">
-          <h3>Connect With Me</h3>
-          <div className="social-icons">
-            <a
-              href="https://www.facebook.com/share/1B5896cUtx/"
-              className="social-icon facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
+            <div className="flex flex-col gap-2">
+              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="email">Email Address</label>
+              <input 
+                type="email" 
+                id="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="john@example.com"
+                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="subject">Subject</label>
+              <input 
+                type="text" 
+                id="subject"
+                name="subject"
+                required
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Let's collaborate on..."
+                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="message">Message</label>
+              <textarea 
+                id="message"
+                name="message"
+                required
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Tell me about your project..."
+                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all resize-none placeholder:text-secondary-fixed-dim"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className={`bg-primary text-on-primary font-label-md text-label-md py-3 px-6 rounded-lg hover:scale-[1.02] active:scale-95 transition-all w-full md:w-auto self-start shadow-md shadow-primary/20 flex items-center justify-center gap-2 cursor-pointer ${
+                isSubmitting ? "opacity-80" : ""
+              }`}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr"
-              className="social-icon instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-          </div>
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
+            </button>
+
+            {submitStatus === 'success' && (
+              <div className="text-green-600 dark:text-green-400 font-body-md text-body-md text-sm mt-2 flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+                Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="text-red-600 dark:text-red-400 font-body-md text-body-md text-sm mt-2 flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
+                </svg>
+                Failed to send message. Please try again.
+              </div>
+            )}
+
+          </form>
         </div>
+
       </div>
+
     </section>
   );
 }

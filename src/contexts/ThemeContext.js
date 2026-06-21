@@ -11,37 +11,20 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check localStorage first, then system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme === 'dark';
-    }
-    // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const isDarkMode = false;
+  const toggleTheme = () => {};
 
   useEffect(() => {
-    // Save to localStorage
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    
-    // Update CSS custom properties on document root
+    localStorage.setItem('theme', 'light');
     const root = document.documentElement;
-    if (isDarkMode) {
-      root.setAttribute('data-theme', 'dark');
-    } else {
-      root.setAttribute('data-theme', 'light');
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode(prev => !prev);
-  };
+    root.setAttribute('data-theme', 'light');
+    root.classList.remove('dark');
+  }, []);
 
   const value = {
     isDarkMode,
     toggleTheme,
-    theme: isDarkMode ? 'dark' : 'light'
+    theme: 'light'
   };
 
   return (

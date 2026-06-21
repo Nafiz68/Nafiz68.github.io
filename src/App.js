@@ -13,7 +13,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
-import "./styles/App.css"; // global styles
+// global styles are loaded in index.js via index.css
 
 function App() {
   return (

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certificates - DevPortfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary-container": "#66768a",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001356",
+                        "secondary": "#5f5e5e",
+                        "outline-variant": "#c5c5d5",
+                        "secondary-container": "#e2dfde",
+                        "primary-container": "#546cd7",
+                        "on-secondary-container": "#636262",
+                        "error-coral": "#FF6B6B",
+                        "background": "#f7f9fb",
+                        "on-surface-variant": "#444653",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b9c3ff",
+                        "primary-fixed-dim": "#b9c3ff",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#fdfcff",
+                        "primary": "#3953bd",
+                        "on-primary-container": "#fffbff",
+                        "surface-tint": "#3c55bf",
+                        "on-tertiary-fixed": "#0c1d2d",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#b8c8de",
+                        "outline": "#757684",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "electric-teal": "#4FD1C5",
+                        "tertiary": "#4e5d70",
+                        "slate-deep": "#2D3748",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#1f3ba6",
+                        "warning-amber": "#FECA57",
+                        "on-background": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed-variant": "#39485a",
+                        "tertiary-fixed": "#d4e4fb",
+                        "on-surface": "#191c1e",
+                        "surface-container-low": "#f2f4f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "section-gap": "120px",
+                        "margin-mobile": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(95, 94, 94, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-transparent transition-all duration-300" id="main-nav">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface" href="#">
+                DevPortfolio
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Skills</a>
+<a aria-current="page" class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Certificates</a>
+</div>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:scale-105 transition-transform duration-200 active:scale-95" href="#">
+                    Hire Me
+                </a>
+</div>
+<!-- Mobile Menu Toggle (Visual Only) -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-section-gap">
+<!-- Header Section -->
+<header class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap relative">
+<!-- Decorative Background Element -->
+<div class="relative z-10 max-w-3xl">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-unit">
+                    Certifications &amp; Achievements
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Documenting my journey of continuous learning and professional growth. A curated selection of technical validations and specialized training.
+                </p>
+</div>
+</header>
+<!-- Certificates Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 gap-gutter md:grid-cols-2"><!-- AWS Card -->
+<div class="flex flex-col bg-white rounded-lg overflow-hidden border border-outline-variant/30 transition-all duration-300 hover:scale-105 soft-shadow">
+<div class="aspect-video w-full overflow-hidden bg-surface-container">
+<img alt="AWS Certified Solutions Architect" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA59fLxQz3dI8bWD4EXbDvwwnVwnW1MK3O7oHDuQhdKnoTf8R7LlVi9GEMw9Gcho4msBYDBLfPV3ECAnIEB6x65OSUtViyT22JwMKH28UgPARY8IjNlvHpYm6agvSZzr3wbLpvZYPSEdkV9D1L2-Nxaje89Dgqx1aWfIE0gQPnm0PoXyjBPNuso-9WE6SJNnnwDB_qftpBJ-4C0DkaT46SFhLz_YDEPFXfLFurN3su9H30-Wq7DJNu8aKsjJC9CxWrF7J37LIDw9g"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Amazon Web Services</p>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 flex-1">AWS Certified Solutions Architect</h2>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/30">
+<span class="font-label-md text-label-md text-secondary">Oct 2023</span>
+<a class="text-primary hover:text-surface-tint font-label-md text-label-md transition-colors" href="#">View Credential</a>
+</div>
+</div>
+</div>
+<!-- Meta Card -->
+<div class="flex flex-col bg-white rounded-lg overflow-hidden border border-outline-variant/30 transition-all duration-300 hover:scale-105 soft-shadow">
+<div class="aspect-video w-full overflow-hidden bg-surface-container">
+<img alt="Front-End Developer Professional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMF653RjaqPZ3zMNf3SdmFErFUCZRAnoamXqDB9enJIY22xMOcJOhs0gcyGQ4rKp2jn_xStnN__KCXXb2PSHkUAsfs5A_uBxudMlv1iBC8vuY_tgocESkZuuAFhNZLEUlCrNGVuTGvDZoBuA3L6QiWqcOhr52hsli_kY-7f-jpZx6ocOLWJtXB3e6PPZ5RKm0LlB2C7qwTG20sf4ITovmHHHxbJfzZdsuLL3QQMe1-Gs1_9ff3hZBSiipxo4xoD6cl4KCbOSoMdA"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Meta</p>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 flex-1">Front-End Developer Professional</h2>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/30">
+<span class="font-label-md text-label-md text-secondary">Aug 2023</span>
+<a class="text-primary hover:text-surface-tint font-label-md text-label-md transition-colors" href="#">View Credential</a>
+</div>
+</div>
+</div>
+<!-- CKA Card -->
+<div class="flex flex-col bg-white rounded-lg overflow-hidden border border-outline-variant/30 transition-all duration-300 hover:scale-105 soft-shadow">
+<div class="aspect-video w-full overflow-hidden bg-surface-container">
+<img alt="Certified Kubernetes Administrator" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChto3H3D8he3ic-RPUnb5j1zk85QlSP5sXrmyG4Mb9tiAsJHIGmYd6gU8-ELWYyzCOBwO0-9NqJPxlkfK289I-4CQt_9-6FlJ_FoJFY8leCg04DBOmWfLXtYMH2LqbxJ-jvsUf0QbwZcvu5QC9jaDhMKh9l2f0MEvOJmgtvcgp09KLQgfEu7TPhFw7ERPFBYGdAaRkwf81veQmGEKghqJAnkhvZc2-Xt9izqNvpJkL69HzFgaitagwifE0HOBQxTR-Zfxq8F656g"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">Linux Foundation</p>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 flex-1">Certified Kubernetes Administrator (CKA)</h2>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/30">
+<span class="font-label-md text-label-md text-secondary">Mar 2023</span>
+<a class="text-primary hover:text-surface-tint font-label-md text-label-md transition-colors" href="#">View Credential</a>
+</div>
+</div>
+</div>
+<!-- MongoDB Card -->
+<div class="flex flex-col bg-white rounded-lg overflow-hidden border border-outline-variant/30 transition-all duration-300 hover:scale-105 soft-shadow">
+<div class="aspect-video w-full overflow-hidden bg-surface-container">
+<img alt="MongoDB Node.js Developer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2UhC9QsiwMoT_-Dj2dEXHv3_R4uSlE-wIIMhiNSyIhc2ztexdYBJMHyXkwpf7VkNlH1rfRLMqztqjwCsr67ILnSj9rqqN6DuBOd5_ZZTK9hxMfxQcSf7ZN6FDW2UMvflRqgFK_A1G7MnwDCcw91dbJaKzFS28wHHGNk1JL3Utb0I5bk4l6Bcteiv29xp9BSHql2NYSEPulfxgf6WKHm1zL5YwTCSoyjZPk_JIGQXsi73nZcQIvQ9kIP-sRvyL4GF8F9WUmSrrhA"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1">MongoDB University</p>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4 flex-1">MongoDB Node.js Developer</h2>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/30">
+<span class="font-label-md text-label-md text-secondary">Jan 2023</span>
+<a class="text-primary hover:text-surface-tint font-label-md text-label-md transition-colors" href="#">View Credential</a>
+</div>
+</div>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<!-- Brand / Copyright -->
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-label-md text-label-md font-bold text-secondary">DevPortfolio</span>
+<span class="font-label-sm text-label-sm text-secondary">© 2024 Developer Portfolio. Built with precision.</span>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to handle sticky nav background opacity based on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-[0_4px_20px_rgba(95,94,94,0.05)]');
+                nav.classList.replace('border-transparent', 'border-outline-variant/20');
+            } else {
+                nav.classList.remove('shadow-[0_4px_20px_rgba(95,94,94,0.05)]');
+                nav.classList.replace('border-outline-variant/20', 'border-transparent');
+            }
+        });
+    </script>
+</body></html>
