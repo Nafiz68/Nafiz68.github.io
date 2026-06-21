@@ -6,7 +6,7 @@ import { useTheme } from '../contexts/ThemeContext';
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { isDarkMode, toggleTheme } = useTheme();
+  // const { isDarkMode, toggleTheme } = useTheme();
 
   const toggleNav = () => setNavOpen(!navOpen);
   const closeNav = () => setNavOpen(false);
@@ -71,13 +71,13 @@ export default function Navbar() {
 
         {/* Controls (Theme toggle & Action Button & Mobile Menu) */}
         <div className="flex items-center gap-4">
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="p-2.5 rounded-lg text-secondary dark:text-surface-container-highest hover:bg-surface-container-low dark:hover:bg-inverse-surface transition-colors focus:outline-none"
             aria-label="Toggle theme"
           >
             {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
+          </button> */}
 
           <Link
             to="contact"

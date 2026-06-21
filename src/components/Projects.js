@@ -121,7 +121,7 @@ export default function Projects() {
 
   const impactStats = useMemo(() => [
     {
-      value: 5,
+      value: 7,
       label: 'Clients Served',
       suffix: '+',
       description: 'Satisfied clients and collaborators globally.',
@@ -136,7 +136,7 @@ export default function Projects() {
       )
     },
     {
-      value: 6,
+      value: 7,
       label: 'Projects Delivered',
       suffix: '+',
       description: 'High-performance production applications.',
@@ -149,7 +149,7 @@ export default function Projects() {
       )
     },
     {
-      value: 98,
+      value: 99,
       label: 'Delivery Success Rate',
       suffix: '%',
       description: 'On-time delivery and client satisfaction.',

@@ -22,47 +22,72 @@ export default function Skills() {
   }, []);
 
   const frontendSkills = [
-    { name: "React / Next.js", level: 85 },
-    { name: "JavaScript / TypeScript", level: 85 },
-    { name: "Tailwind CSS & Styling", level: 90 },
-    { name: "OpenGL / Computer Graphics", level: 65 }
-  ];
+  { name: "React / Next.js", level: 85 },
+  { name: "JavaScript / TypeScript", level: 85 },
+  { name: "Tailwind CSS & Styling", level: 90 },
+  { name: "Socket.IO", level: 80 },
+  { name: "Web3.js", level: 75 },
+  { name: "OpenGL / Computer Graphics", level: 65 }
+];
 
-  const backendSkills = [
-    { name: "Node.js / Express.js", dots: 4 },
-    { name: "Python / PyTorch / FastAPI", dots: 4 },
-    { name: "SQL & NoSQL (Postgres, Mongo)", dots: 4 }
-  ];
+const backendSkills = [
+  { name: "Node.js / Express.js", dots: 4 },
+  { name: "Python / FastAPI / PyTorch", dots: 4 },
+  { name: "SQL & NoSQL (Postgres, MongoDB)", dots: 4 },
+  { name: "Supabase & Prisma ORM", dots: 4 },
+  // { name: "OAuth2 & Passport.js", dots: 4 },
+  { name: "Blockchain (Solidity, Hyperledger)", dots: 3 }
+];
 
-  const tools = [
-    "Git / GitHub",
-    "Docker",
-    "n8n Automation",
-    "Langchain",
-    "Supabase",
-    "Prisma ORM",
-    "Linux / Shell",
-    "API Development"
-  ];
+const tools = [
+  "Git / GitHub",
+  "Docker",
+  "n8n Automation",
+  "Puppeteer",
+  "Playwright",
+  "Supabase",
+  "Prisma ORM",
+  "Postman",
+  "REST APIs",
+  "Webhook Integration",
+
+  "JWT Authentication",
+  "OpenAI API",
+  "Groq AI",
+  "LangChain",
+  "OAuth2",
+  "Vector Databases",
+  "Redis",
+  "Cohere",
+  "NLP",
+  "Regex",
+  "pdf-parse",
+  "mammoth",
+  "Data Extraction",
+  "Data Manipulation",
+  "Web Scraping",
+  "Figma",
+  "Arduino",
+];
 
   const professionalEdge = [
+  {
+    title: "Academic High Distinction",
+    description: "Awarded Dean's List honors at BRAC University in Summer 2024 and Spring 2025."
+  },
+  {
+    title: "Award-Winning Project",
+    description: "Secured 2nd Runner-up position at the BRAC CSE471 Project Showcase (Summer 2025) for ThesisFlow."
+  },
     {
-      title: "AI Security & LLM Research",
-      description: "Experience with quantization weight repair mechanism to stabilize pretrained models."
-    },
-    {
-      title: "Competitive Programming",
-      description: "Solved 150+ problems across various platforms, developing strong algorithmic thinking."
-    },
-    {
-      title: "Technical Instruction",
-      description: "Mentored undergraduates in Python Data Structures and OpenGL graphics rendering."
-    },
-    {
-      title: "Workflow Automation",
-      description: "Building production-grade automation pipelines and agentic integrations with n8n."
-    }
-  ];
+  title: "Problem Solving",
+  description: "Solved 150+ coding problems across competitive programming platforms, strengthening algorithmic and analytical thinking."
+  },
+  {
+    title: "Workflow Automation",
+    description: "Designed and deployed 50+ automation workflows and AI-powered integrations using n8n."
+  }
+];
 
   return (
     <section id="skills" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative" ref={sectionRef}>
@@ -172,7 +197,7 @@ export default function Skills() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94-3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
               </svg>
             </div>
-            <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">Professional Edge</h3>
+            <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">Impact & Recognition</h3>
           </header>
           
           <div className="grid grid-cols-1 gap-4">

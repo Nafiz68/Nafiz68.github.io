@@ -21,11 +21,11 @@ export default function About() {
       )
     },
     {
-      title: "Tutoring & Teaching",
-      description: "Providing expert academic support and tutoring in data structures, algorithms, OpenGL graphics, and programming fundamentals.",
+    title: "API Integrations",
+    description: "Building scalable integrations between third-party services, databases, CRMs, and AI systems using REST APIs, webhooks, and authentication protocols.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A5.905 5.905 0 0 1 8 3.447.907.907 0 0 1 9 3h6c.319 0 .614.124.83.329a5.907 5.907 0 0 1 4.396 5.961 50.6 50.6 0 0 0-2.658.813m-11.162 0A51.339 51.339 0 0 1 12 11.25c2.107 0 4.136-.14 6.116-.412m-11.162 0a60.37 60.37 0 0 1-.371-7.58 1.125 1.125 0 0 1 1.066-1.077 50.843 50.843 0 0 1 8.734 0 1.125 1.125 0 0 1 1.065 1.077 60.39 60.39 0 0 1-.371 7.58M8.07 19.143a10.515 10.515 0 0 1-1.47-3.91M10.5 21.75a9.75 9.75 0 0 0 3 0m0 0a10.515 10.515 0 0 0 1.47-3.91" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.182-2.121a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
         </svg>
       )
     },
@@ -33,9 +33,9 @@ export default function About() {
       title: "Machine Learning & AI",
       description: "Applying advanced machine learning models and data science algorithms to resolve complex, real-world analytical problems.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 21m0 0l-.813-5.096L9 21zm0 0h4.992m-4.993 0H4.008m13.805-5.096L17 21m0 0l-.813-5.096L17 21zm0 0h4.992m-4.993 0h-4.992m-2.906-8.904a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm13.5 0a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
-        </svg>
+       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.75h4.5M12 3.75v3m-6 3h12a1.5 1.5 0 011.5 1.5v6A1.5 1.5 0 0118 18.75H6a1.5 1.5 0 01-1.5-1.5v-6A1.5 1.5 0 016 9.75Zm3 3h.008v.008H9v-.008Zm6 0h.008v.008H15v-.008ZM9 15h6" />
+</svg>
       )
     },
     {
@@ -43,8 +43,8 @@ export default function About() {
       description: "Building intelligent workflow automation systems using n8n and orchestrating multi-agent AI architectures to solve operational issues.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-        </svg>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M11.983 3.75c.382 0 .757.02 1.125.058l.34 1.703a7.52 7.52 0 012.03.84l1.447-.963a8.3 8.3 0 011.59 1.59l-.963 1.447c.36.64.643 1.319.84 2.03l1.703.34a8.36 8.36 0 010 2.25l-1.703.34a7.52 7.52 0 01-.84 2.03l.963 1.447a8.3 8.3 0 01-1.59 1.59l-1.447-.963a7.52 7.52 0 01-2.03.84l-.34 1.703a8.36 8.36 0 01-2.25 0l-.34-1.703a7.52 7.52 0 01-2.03-.84l-1.447.963a8.3 8.3 0 01-1.59-1.59l.963-1.447a7.52 7.52 0 01-.84-2.03l-1.703-.34a8.36 8.36 0 010-2.25l1.703-.34a7.52 7.52 0 01.84-2.03l-.963-1.447a8.3 8.3 0 011.59-1.59l1.447.963a7.52 7.52 0 012.03-.84l.34-1.703c.368-.038.743-.058 1.125-.058Z" />
+</svg>
       )
     }
   ];
