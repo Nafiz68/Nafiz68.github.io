@@ -50,17 +50,17 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="about" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       {/* Section 1: Professional Bio */}
-      <div className="max-w-4xl mx-auto flex flex-col gap-6 mb-24">
-        <div className="flex flex-col gap-6">
-          <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider">
+      <div className="max-w-4xl mx-auto flex flex-col gap-5 mb-12 md:mb-14">
+        <div className="flex flex-col gap-5">
+          <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mx-auto">
             ABOUT ME
           </div>
           <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface dark:text-white leading-tight">
             Crafting digital solutions with technical precision.
           </h2>
-          <div className="font-body-lg text-body-lg text-secondary dark:text-surface-container-highest flex flex-col gap-4">
+          <div className="font-body-lg text-body-lg text-secondary dark:text-surface-container-highest flex flex-col gap-3">
             <p>
               My journey in technology began with competitive programming, where I developed strong
               analytical thinking and algorithm design skills. This foundation led me to explore
@@ -75,7 +75,7 @@ export default function About() {
           </div>
           
           {/* Highlight Stats Chips */}
-          <div className="flex flex-wrap gap-3 mt-4">
+          <div className="flex flex-wrap gap-3 mt-2">
             <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
               BRAC University
             </div>
@@ -93,17 +93,17 @@ export default function About() {
       </div>
 
       {/* Section 2: Services / What I Do */}
-      <div className="border-t border-surface-variant/30 pt-20 mb-20">
-        <div className="text-center mb-16">
-          <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Services</h2>
-          <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest">What I Offer</p>
+      <div className="border-t border-surface-variant/30 pt-10 md:pt-12 mb-10 md:mb-12">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Expertise</h2>
+          <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest">Here’s how I can help you</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, idx) => (
             <div 
               key={idx}
-              className="bg-white dark:bg-[#191c1e] p-8 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 flex flex-col gap-4 soft-shadow group"
+              className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 flex flex-col gap-3 soft-shadow group"
             >
               <div className="w-12 h-12 rounded-lg bg-primary/5 dark:bg-inverse-primary/5 flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -120,7 +120,7 @@ export default function About() {
       </div>
 
       {/* Section 3: CV Download CTA */}
-      <div className="bg-surface-container-low dark:bg-[#2d3133] rounded-2xl p-8 md:p-12 soft-shadow flex flex-col md:flex-row justify-between items-center gap-6 border border-outline-variant/20">
+      <div className="bg-surface-container-low dark:bg-[#2d3133] rounded-2xl p-6 md:p-8 soft-shadow flex flex-col md:flex-row justify-between items-center gap-5 border border-outline-variant/20">
         <div className="space-y-2 text-center md:text-left">
           <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">Want to know more?</h3>
           <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest max-w-md">

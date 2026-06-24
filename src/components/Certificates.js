@@ -49,10 +49,10 @@ export default function Certificates() {
   ];
 
   return (
-    <section id="certificates" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="certificates" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       
       {/* Header */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
           CREDENTIALS
         </div>
@@ -63,7 +63,7 @@ export default function Certificates() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {certificates.map((cert, idx) => (
           <div 
             key={idx} 
@@ -103,7 +103,7 @@ export default function Certificates() {
             </div>
 
             {/* Certificate Details */}
-            <div className="p-6 flex flex-col flex-1 justify-between">
+            <div className="p-5 flex flex-col flex-1 justify-between">
               <div>
                 <p className="font-label-sm text-label-sm text-primary dark:text-inverse-primary uppercase tracking-widest mb-1.5">
                   {cert.issuer}

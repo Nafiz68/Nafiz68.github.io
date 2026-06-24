@@ -236,19 +236,19 @@ export default function Projects() {
   }, [activeFilter]);
 
   return (
-    <section id="projects" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
-      <div className="mb-16">
+    <section id="projects" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+      <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
           PORTFOLIO
         </div>
         <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-4">Selected Works</h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-container-highest max-w-2xl">
+        <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-container-highest max-w-2xl mx-auto">
           A curated gallery of engineering challenges solved, emphasizing performance, vector models, and client safety.
         </p>
       </div>
 
       {/* Category Tabs */}
-      <div className="flex flex-wrap gap-3 mb-16">
+      <div className="flex flex-wrap gap-3 mb-10 md:mb-12">
         {filters.map((filter) => (
           <button
             key={filter}
@@ -376,7 +376,7 @@ export default function Projects() {
       )}
 
       {/* GitHub CTA */}
-      <div className="text-center mt-16">
+      <div className="text-center mt-10 md:mt-12">
         <a 
           href="https://github.com/Nafiz68"
           target="_blank"
@@ -391,7 +391,7 @@ export default function Projects() {
       </div>
 
       {/* Experience in numbers statistics section */}
-      <div className="mt-24 border-t border-surface-variant/30 pt-20" ref={statsRef}>
+      <div className="mt-12 md:mt-14 border-t border-surface-variant/30 pt-10 md:pt-12" ref={statsRef}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {impactStats.map((stat, idx) => (
             <div 

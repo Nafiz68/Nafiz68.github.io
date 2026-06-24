@@ -8,7 +8,7 @@ export default function Experience() {
       position: "Automation Specialist",
       company: "Softvence",
       location: "Dhaka, Bangladesh",
-      duration: "Apr 2026 – Present",
+      duration: "Apr 2026 – June 2026",
       type: "Full Time",
       responsibilities: [
         "Design and deploy complex automation workflows using n8n based on client requirements.",
@@ -79,8 +79,8 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
-      <div className="text-center mb-20">
+    <section id="experience" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+      <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
           JOURNEY
         </div>
@@ -94,7 +94,7 @@ export default function Experience() {
         {/* Center line on desktop, Left line on mobile */}
         <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant/60 dark:bg-outline-variant/30 transform md:-translate-x-1/2 z-0"></div>
         
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-8 md:gap-10">
           {experiences.map((exp, index) => {
             const isEven = index % 2 === 0;
             return (
@@ -109,7 +109,7 @@ export default function Experience() {
                   </div>
                 ) : (
                   /* Desktop Left Side Card (For Odd indices) */
-                  <div className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow hidden md:block group text-right">
+                  <div className="bg-white dark:bg-[#191c1e] p-5 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow hidden md:block group text-right">
                     <span className="bg-[#B9C9DF]/20 dark:bg-[#B9C9DF]/10 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-2.5 py-1 rounded inline-block mb-4 uppercase tracking-wider">
                       {exp.type}
                     </span>
@@ -133,7 +133,7 @@ export default function Experience() {
                 {/* Desktop Right Side Content */}
                 {isEven ? (
                   /* Desktop Right Side Card (For Even indices) / Mobile Content (All) */
-                  <div className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow group">
+                  <div className="bg-white dark:bg-[#191c1e] p-5 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow group">
                     <div className="md:hidden mb-4">
                       <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">{exp.position}</h3>
                       <div className="font-label-md text-label-md text-primary dark:text-inverse-primary mt-1">{exp.company}</div>
@@ -161,7 +161,7 @@ export default function Experience() {
                       <div className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest mt-1">{exp.duration}</div>
                     </div>
                     {/* Mobile card (shown only on mobile) */}
-                    <div className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow group md:hidden mt-2">
+                    <div className="bg-white dark:bg-[#191c1e] p-5 rounded-xl border border-outline-variant/30 hover:border-primary/50 dark:hover:border-inverse-primary/50 transition-all duration-300 soft-shadow group md:hidden mt-2">
                       <div className="mb-4">
                         <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">{exp.position}</h3>
                         <div className="font-label-md text-label-md text-primary dark:text-inverse-primary mt-1">{exp.company}</div>

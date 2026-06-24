@@ -48,13 +48,13 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-[85vh] relative flex flex-col md:flex-row items-center gap-12 pt-[140px] pb-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
+    <section id="hero" className="min-h-[82vh] relative flex flex-col md:flex-row items-center gap-8 md:gap-10 pt-24 md:pt-28 pb-12 md:pb-14 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
       {/* Decorative background blurs */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary-fixed dark:bg-primary-fixed/20 rounded-full mix-blend-multiply filter blur-[80px] md:blur-[120px] opacity-40 pointer-events-none"></div>
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-tertiary-fixed dark:bg-tertiary-fixed/20 rounded-full mix-blend-multiply filter blur-[60px] md:blur-[100px] opacity-40 pointer-events-none"></div>
       
       {/* Hero content */}
-      <div className="flex-1 space-y-6 relative z-10 order-2 md:order-1">
+      <div className="flex-1 space-y-5 relative z-10 order-2 md:order-1">
         <h1 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface dark:text-white leading-tight tracking-tight">
           Hi, I'm <span className="text-primary dark:text-inverse-primary">Nafiz Khan</span> <br/>
           Building Digital <br/><span className="text-primary dark:text-inverse-primary">Experiences</span> <br/>with Precision.
@@ -71,7 +71,7 @@ export default function Hero() {
           technology and real-world impact.
         </p>
 
-        <div className="flex flex-wrap gap-4 pt-4">
+        <div className="flex flex-wrap gap-4 pt-2">
           <Link
             to="projects"
             smooth={true}

@@ -8,12 +8,13 @@ export default function Footer() {
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/nafiz-khan-34b7a6309' },
     { name: 'GitHub', url: 'https://github.com/Nafiz68' },
     { name: 'Facebook', url: 'https://www.facebook.com/share/1B5896cUtx/' },
-    { name: 'Instagram', url: 'https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr' }
+    { name: 'Instagram', url: 'https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr' },
+    { name: 'Scholar', url: 'https://scholar.google.com/citations?user=PSQeWhkAAAAJ&hl=en' }
   ];
 
   return (
-    <footer className="w-full py-12 bg-surface-container-low dark:bg-[#191c1e] border-t border-outline-variant/30 mt-20">
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+    <footer className="w-full py-6 bg-surface-container-low dark:bg-[#191c1e] border-t border-outline-variant/30 mt-8">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-5 text-center md:text-left">
         
         {/* Brand / Tagline */}
         <div className="flex flex-col gap-1">

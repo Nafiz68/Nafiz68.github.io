@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -81,7 +81,8 @@ export default function Contact() {
     {
       icon: <FaGithub className="w-5 h-5" />,
       url: "https://github.com/Nafiz68",
-      label: "GitHub"
+      label: "GitHub",
+      hoverClass: "hover:text-[#181717] dark:hover:text-white hover:border-[#181717]/50 dark:hover:border-white/50"
     },
     {
       icon: <FaLinkedin className="w-5 h-5" />,
@@ -96,15 +97,21 @@ export default function Contact() {
     {
       icon: <FaInstagram className="w-5 h-5" />,
       url: "https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr",
-      label: "Instagram"
+      label: "Instagram",
+      hoverClass: "hover:text-[#E4405F] hover:border-[#E4405F]/50"
+    },
+    {
+      icon: <FaGraduationCap className="w-5 h-5" />,
+      url: "https://scholar.google.com/citations?user=PSQeWhkAAAAJ&hl=en",
+      label: "Google Scholar"
     }
   ];
 
   return (
-    <section id="contact" className="py-24 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="contact" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       
       {/* Header */}
-      <div className="text-center mb-20">
+      <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
           CONNECT
         </div>
@@ -115,10 +122,10 @@ export default function Contact() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
         
         {/* Info Column */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           <div>
             <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold mb-4">
               Get In Touch
@@ -150,7 +157,7 @@ export default function Contact() {
           </div>
 
           {/* Social Links */}
-          <div className="pt-6 border-t border-surface-variant/30">
+          <div className="pt-4 border-t border-surface-variant/30">
             <h4 className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest uppercase tracking-wider mb-4">Social Handles</h4>
             <div className="flex gap-4">
               {socialLinks.map((social, idx) => (
@@ -160,7 +167,7 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-11 h-11 rounded-lg bg-white dark:bg-[#191c1e] flex items-center justify-center border border-outline-variant/30 text-secondary dark:text-surface-container-highest hover:text-primary dark:hover:text-inverse-primary hover:border-primary/50 dark:hover:border-inverse-primary/50 hover:scale-105 transition-all soft-shadow cursor-pointer"
+                  className={`w-11 h-11 rounded-lg bg-white dark:bg-[#191c1e] flex items-center justify-center border border-outline-variant/30 text-secondary dark:text-surface-container-highest ${social.hoverClass || "hover:text-primary dark:hover:text-inverse-primary hover:border-primary/50 dark:hover:border-inverse-primary/50"} hover:scale-105 transition-all soft-shadow cursor-pointer`}
                 >
                   {social.icon}
                 </a>
@@ -170,8 +177,8 @@ export default function Contact() {
         </div>
 
         {/* Form Column */}
-        <div className="bg-white dark:bg-[#191c1e] p-8 rounded-xl border border-outline-variant/30 soft-shadow">
-          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+        <div className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 soft-shadow">
+          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             
             <div className="flex flex-col gap-2">
               <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="name">Your Name</label>
