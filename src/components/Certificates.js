@@ -53,7 +53,7 @@ export default function Certificates() {
       
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">
-        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
+        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mb-4">
           CREDENTIALS
         </div>
         <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Certifications</h2>

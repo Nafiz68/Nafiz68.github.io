@@ -79,14 +79,18 @@ const tools = [
     title: "Award-Winning Project",
     description: "Secured 2nd Runner-up position at the BRAC CSE471 Project Showcase (Summer 2025) for ThesisFlow."
   },
+  {
+  title: "Research Publication",
+  description: "Published undergraduate research on improving the robustness of pretrained LLMs against quantization and weight noise attacks."
+  },
     {
   title: "Problem Solving",
   description: "Solved 150+ coding problems across competitive programming platforms, strengthening algorithmic and analytical thinking."
   },
-  {
-    title: "Workflow Automation",
-    description: "Designed and deployed 50+ automation workflows and AI-powered integrations using n8n."
-  }
+  // {
+  //   title: "Workflow Automation",
+  //   description: "Designed and deployed 50+ automation workflows and AI-powered integrations using n8n."
+  // }
 ];
 
   return (
@@ -94,7 +98,7 @@ const tools = [
       
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">
-        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
+        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mb-4">
           CAPABILITIES
         </div>
         <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Technical Expertise</h2>

@@ -12,7 +12,8 @@ export default function Experience() {
       type: "Full Time",
       responsibilities: [
         "Design and deploy complex automation workflows using n8n based on client requirements.",
-        "Build secure API integrations and AI-driven workflows, testing and optimizing for scale."
+        "Build secure API integrations and AI-driven workflows, testing and optimizing for scale.",
+        "Delivered 7+ high-performance production applications for clients across diverse domains."
       ],
       icon: <FaCode size={18} />,
       iconColor: "text-primary border-primary dark:text-inverse-primary dark:border-inverse-primary"
@@ -37,8 +38,12 @@ export default function Experience() {
       company: "BRAC University – CSE Department",
       location: "Dhaka, Bangladesh",
       duration: "Jan 2025 – Jan 2026",
-      type: "Research / AI & ML",
-      responsibilities: [
+      type: "Research / Publication",
+      publication: {
+        title: "Anchor-Guided Repair: Enhancing Stability of Compromised Pretrained Language Models Against Low-Precision and Weight Noise Attacks",
+        url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PSQeWhkAAAAJ&citation_for_view=PSQeWhkAAAAJ:u5HHmVD_uO8C"
+        },
+        responsibilities: [
         "Developed an anchor-guided weight repair mechanism to stabilize compromised pretrained language models (LLMs).",
         "Enhanced model robustness against quantization and weight noise attacks without retraining.",
         "Documented research methodologies and results for potential academic publications."
@@ -120,6 +125,7 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
+                    
                   </div>
                 )}
 
@@ -142,6 +148,16 @@ export default function Experience() {
                     <span className="bg-[#B9C9DF]/20 dark:bg-[#B9C9DF]/10 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-2.5 py-1 rounded inline-block mb-4 uppercase tracking-wider">
                       {exp.type}
                     </span>
+                    {exp.publication && (
+                      <a
+                        href={exp.publication.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block mb-4 text-black dark:text-black font-semibold hover:underline leading-relaxed"
+                      >
+                        {exp.publication.title}
+                      </a>
+                    )}
                     <ul className="space-y-2">
                       {exp.responsibilities.map((resp, rIdx) => (
                         <li key={rIdx} className="font-body-md text-body-md text-on-surface-variant dark:text-surface-container-highest text-sm leading-relaxed flex items-start gap-2">
@@ -150,6 +166,7 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
+                    
                   </div>
                 ) : (
                   /* Desktop Right Side Content (For Odd indices) / Mobile Content (All) */
@@ -170,6 +187,16 @@ export default function Experience() {
                       <span className="bg-[#B9C9DF]/20 dark:bg-[#B9C9DF]/10 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-2.5 py-1 rounded inline-block mb-4 uppercase tracking-wider">
                         {exp.type}
                       </span>
+                      {exp.publication && (
+                        <a
+                          href={exp.publication.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block mb-4 text-black dark:text-black font-semibold hover:underline leading-relaxed"
+                        >
+                          {exp.publication.title}
+                        </a>
+                      )}
                       <ul className="space-y-2">
                         {exp.responsibilities.map((resp, rIdx) => (
                           <li key={rIdx} className="font-body-md text-body-md text-on-surface-variant dark:text-surface-container-highest text-sm leading-relaxed flex items-start gap-2">
@@ -178,6 +205,7 @@ export default function Experience() {
                           </li>
                         ))}
                       </ul>
+                    
                     </div>
                   </div>
                 )}

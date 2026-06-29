@@ -54,39 +54,50 @@ export default function About() {
       {/* Section 1: Professional Bio */}
       <div className="max-w-4xl mx-auto flex flex-col gap-5 mb-12 md:mb-14">
         <div className="flex flex-col gap-5">
-          <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mx-auto">
+          <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mx-auto">
             ABOUT ME
           </div>
           <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface dark:text-white leading-tight">
-            Crafting digital solutions with technical precision.
+            Building scalable software and practical AI solutions.
           </h2>
           <div className="font-body-lg text-body-lg text-secondary dark:text-surface-container-highest flex flex-col gap-3">
-            <p>
-              My journey in technology began with competitive programming, where I developed strong
-              analytical thinking and algorithm design skills. This foundation led me to explore
-              full-stack development, where I discovered my passion for creating end-to-end solutions.
-            </p>
-            <p>
-              Today, I focus on building scalable web applications, implementing machine learning models,
-              and exploring emerging technologies like blockchain. Recently, I have been designing workflow 
-              automations with n8n and creating autonomous AI agents, combining automation with intelligence 
-              to solve practical, real-world challenges.
-            </p>
-          </div>
+          <p>
+            I'm a Computer Science graduate from BRAC University specializing in full-stack
+            software engineering, AI systems, and workflow automation. I build scalable,
+            production-ready applications using modern web technologies while integrating
+            AI to solve practical business problems.
+          </p>
+
+          <p>
+            My experience spans MERN development, Retrieval-Augmented Generation (RAG),
+            AI agents, cybersecurity-focused applications, and n8n automations. I also
+            conducted undergraduate research on improving the robustness of pretrained
+            language models, resulting in a published research paper.
+          </p>
+
+          <p>
+            I enjoy building software that combines clean engineering, intelligent
+            automation, and real-world usability from SaaS platforms and developer tools
+            to AI-powered applications.
+          </p>
+        </div>
           
           {/* Highlight Stats Chips */}
-          <div className="flex flex-wrap gap-3 mt-2">
+          <div className="flex flex-wrap justify-center gap-3 mt-2">
             <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
-              BRAC University
+              Software Engineering
             </div>
             <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
               Full-Stack Development
             </div>
             <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
-              AI Security Research
+              AI Agents & Automation
             </div>
             <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
-              n8n & AI Automation
+              System Design
+            </div>
+            <div className="bg-[#B9C9DF]/20 text-slate-deep dark:text-inverse-primary font-label-sm text-label-sm px-4 py-2 rounded">
+              AI Research
             </div>
           </div>
         </div>

@@ -35,19 +35,61 @@ const projects = [
     deliverables: ["Frontend Web Interface", "Instant Gig matching algorithm", "3D Asset optimizations", "Admin Dashboard"]
   },
   {
+  title: "NavWatch",
+  description: "A real-time AIS vessel tracking platform that decodes live maritime data from a TCP feed and visualizes vessel movements on an interactive map with live updates.",
+  github: "https://github.com/Nafiz68/AIS-Vessel-Map",
+  demo: "https://ais-vessel-map.vercel.app/",
+  tech: ["React.js", "Node.js", "Express.js", "MongoDB", "WebSocket", "Leaflet"],
+  category: "Full Stack",
+  duration: "1 month",
+  image: "/images/projects/navwatch.png",
+  spanClass: "col-span-1 lg:col-span-6",
+  imageAlign: "object-center",
+  role: "Full Stack Developer",
+  challenge: "Real-time AIS vessel feeds generate continuous high-volume NMEA messages that require efficient decoding, storage, and synchronization without introducing duplicate records or UI lag.",
+  solution: "Built a full-stack system that decodes live AIS messages, upserts vessel data in MongoDB, and broadcasts updates via WebSockets to an interactive Leaflet map with searchable vessel information and real-time status indicators.",
+  deliverables: [
+    "Real-time Vessel Tracking Dashboard",
+    "AIS NMEA Decoder & TCP Integration",
+    "WebSocket Live Update System",
+    "REST API & MongoDB Backend"
+  ]
+  },
+  {
     title: "Due Diligence Agent",
     description: "AI-powered automation system that processes enterprise questionnaires using document indexing, semantic search, and RAG answer generation.",
     github: "https://github.com/Nafiz68/Due-Diligence-Agent",
     tech: ["Node.js", "Express", "MongoDB", "Redis", "ChromaDB", "Groq (LLaMA 3.1)", "HuggingFace", "React", "TypeScript"],
-    category: "AI & Automation",
+    category: "AI / RAG",
     duration: "5 months",
     image: "/images/projects/due-dilligence.png",
-    spanClass: "col-span-1 lg:col-span-4",
+    spanClass: "col-span-1 lg:col-span-6",
     imageAlign: "object-top",
     role: "AI Systems Architect",
     challenge: "Filling business compliance questionnaires takes weeks of auditing past corporate PDF reports and manual cross-referencing.",
     solution: "Designed an automated retrieval-augmented generation (RAG) agent that indexes documents into ChromaDB vector stores, generates context-anchored responses with exact citations, and uses Redis queues to manage parallel tasks.",
     deliverables: ["Vector Indexing Pipeline", "RAG Answer Generator", "Admin Approval Console", "Asynchronous Redis Workers"]
+  },
+  {
+  title: "Multimodal RAG Agent",
+  description: "A multimodal Retrieval-Augmented Generation API that identifies clothing products from customer images using CLIP embeddings, ChromaDB vector search, and an AI-powered retrieval pipeline.",
+  github: "https://github.com/Nafiz68/Multimodal-RAG-Agent-for-Clothing-Store",
+  demo: "https://huggingface.co/spaces/Nafizk368/Multimodal-RAG-Agent-for-Clothing-Store",
+  tech: ["Python", "FastAPI", "LangChain", "ChromaDB", "SQLite", "CLIP", "Hugging Face"],
+  category: "AI / RAG",
+  duration: "1 month",
+  image: "/images/projects/multimodal-rag.png",
+  spanClass: "col-span-1 lg:col-span-4",
+  imageAlign: "object-center",
+  role: "AI & Backend Developer",
+  challenge: "Traditional keyword search struggles to identify clothing items from images, making it difficult to match customer-uploaded photos with the correct products in a catalog.",
+  solution: "Developed a multimodal RAG pipeline that generates CLIP embeddings, performs semantic similarity search with ChromaDB, retrieves product metadata from SQLite, and exposes the workflow through a FastAPI API for real-time image-based product identification.",
+  deliverables: [
+    "Multimodal RAG API",
+    "CLIP Embedding & Vector Search",
+    "FastAPI Backend",
+    "LangChain Retrieval Agent"
+  ]
   },
   {
     title: "Credenza",
@@ -58,12 +100,54 @@ const projects = [
     category: "Cybersecurity",
     duration: "1 month",
     image: "/images/projects/credenza.png",
-    spanClass: "col-span-1 md:col-span-2 lg:col-span-8",
+    spanClass: "col-span-1 lg:col-span-4",
     imageAlign: "object-top",
     role: "Security & Backend Lead",
     challenge: "Storing keys and threat monitoring coordinates in third-party clouds exposes critical infrastructure data to perimeter breaches.",
     solution: "Implemented PBKDF2 key derivation and AES-GCM local encrypting inside the client browser. No plain text data or passwords ever leave the user environment.",
     deliverables: ["Zero-Knowledge Vault UI", "Cryptographic Operations Module", "Prisma Database sync schema", "Reconnaissance visual logs"]
+  },
+  {
+  title: "Multi-Agent AI Debate System",
+  description: "A LangChain-powered multi-agent system where two AI agents debate opposing viewpoints while a third AI judge evaluates arguments and returns structured scoring with a final verdict.",
+  github: "https://github.com/Nafiz68/Multi-Agent-AI-Debate-System",
+  demo: "",
+  tech: ["Python", "LangChain", "Groq", "LLMs", "Google Colab"],
+  category: "AI Agents & Automation",
+  duration: "1 week",
+  image: "/images/projects/ai-debate.png",
+  spanClass: "col-span-1 lg:col-span-4",
+  imageAlign: "object-center",
+  role: "AI Developer",
+  challenge: "Evaluating AI reasoning objectively requires coordinating multiple specialized agents while maintaining structured debate flow and unbiased assessment.",
+  solution: "Built a multi-agent debate framework where two LLM-powered agents generate arguments and rebuttals from opposing perspectives, while a dedicated judge agent scores logic, clarity, and persuasiveness before producing a structured JSON verdict.",
+  deliverables: [
+    "Multi-Agent Debate Framework",
+    "AI Judge & Scoring System",
+    "Structured JSON Output",
+    "LangChain Agent Orchestration"
+  ]
+ },
+ {
+  title: "n8n AI Automation Collection",
+  description: "A curated collection of 35+ production-ready n8n workflows automating AI agents, business processes, content generation, lead generation, and productivity tasks using modern APIs and LLMs.",
+  github: "https://github.com/Nafiz68/n8n-workflows",
+  demo: "",
+  tech: ["n8n", "OpenAI", "LangChain", "Google Sheets", "Telegram", "REST APIs"],
+  category: "AI Agents & Automation",
+  duration: "10 months",
+  image: "/images/projects/n8n-workflows.png",
+  spanClass: "col-span-1 lg:col-span-4",
+  imageAlign: "object-center",
+  role: "Automation Engineer",
+  challenge: "Businesses often rely on repetitive manual workflows across multiple platforms, leading to inefficiencies, slow response times, and fragmented automation.",
+  solution: "Designed and built a repository of 40+ reusable n8n workflows covering AI agents, RAG pipelines, recruitment, CRM automation, content generation, notifications, and business process automation, enabling rapid deployment with configurable credentials.",
+  deliverables: [
+    "40+ Ready-to-Use n8n Workflows",
+    "AI Agents & RAG Pipelines",
+    "Business Process Automation",
+    "API & Third-Party Integrations"
+  ]
   },
   {
     title: "TrackUp",
@@ -74,7 +158,7 @@ const projects = [
     category: "Full Stack",
     duration: "4 months",
     image: "/images/projects/trackup.png",
-    spanClass: "col-span-1 lg:col-span-6",
+    spanClass: "col-span-1 md:col-span-2 lg:col-span-8",
     imageAlign: "object-top",
     role: "Lead Architect",
     challenge: "Job seekers lose track of deadlines, application stages, and distinct job parameters when applying to dozens of listings.",
@@ -106,7 +190,7 @@ const projects = [
     category: "Full Stack",
     duration: "1 month",
     image: "/images/projects/sweetshop.png",
-    spanClass: "col-span-1 md:col-span-2 lg:col-span-12",
+    spanClass: "col-span-1 lg:col-span-6",
     imageAlign: "object-center",
     role: "Backend & DB Architect",
     challenge: "Boutique sweet shops deal with fresh inventory expiration and localized deliveries requiring flexible billing structures.",
@@ -162,7 +246,7 @@ export default function Projects() {
       )
     },
     {
-      value: 30,
+      value: 35,
       label: 'Self Projects Built',
       suffix: '+',
       description: 'Open-source tools, packages, and extensions.',
@@ -226,8 +310,7 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  // Map filters
-  const filters = ['All', 'Full Stack', 'AI & Automation', 'Cybersecurity'];
+  const categories = useMemo(() => ['All', ...new Set(projects.map(p => p.category))], []);
 
   // Filtered projects list
   const filteredProjects = useMemo(() => {
@@ -238,7 +321,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       <div className="text-center mb-10 md:mb-12">
-        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
+        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mb-4">
           PORTFOLIO
         </div>
         <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-4">Selected Works</h2>
@@ -248,8 +331,8 @@ export default function Projects() {
       </div>
 
       {/* Category Tabs */}
-      <div className="flex flex-wrap gap-3 mb-10 md:mb-12">
-        {filters.map((filter) => (
+      <div className="flex flex-wrap justify-center gap-3 mb-10 md:mb-12">
+        {categories.map((filter) => (
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}

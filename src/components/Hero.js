@@ -55,9 +55,12 @@ export default function Hero() {
       
       {/* Hero content */}
       <div className="flex-1 space-y-5 relative z-10 order-2 md:order-1">
-        <h1 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface dark:text-white leading-tight tracking-tight">
-          Hi, I'm <span className="text-primary dark:text-inverse-primary">Nafiz Khan</span> <br/>
-          Building Digital <br/><span className="text-primary dark:text-inverse-primary">Experiences</span> <br/>with Precision.
+        <h1 className="text-5xl md:text-[4rem] font-bold text-on-surface dark:text-white leading-tight tracking-tight">
+          Hi, I'm <span className="text-primary dark:text-inverse-primary">Nafiz Khan</span> <br />
+          Building Intelligent <br />
+          <span className="text-primary dark:text-inverse-primary text-[0.95em]">
+  Software Solutions.
+</span>
         </h1>
         
         <div className="font-headline-md text-headline-md text-secondary dark:text-surface-container-highest min-h-[40px]">
@@ -66,9 +69,8 @@ export default function Hero() {
         </div>
 
         <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-container-highest max-w-xl leading-relaxed">
-          Passionate Computer Science student at BRAC University specializing in full-stack development, 
-          machine learning, and competitive programming. Building innovative solutions that bridge 
-          technology and real-world impact.
+          Computer Science graduate specializing in full-stack engineering, AI systems, and workflow automation.
+          I build scalable web applications, AI-powered tools, and production-ready software that solve real-world problems.
         </p>
 
         <div className="flex flex-wrap gap-4 pt-2">
