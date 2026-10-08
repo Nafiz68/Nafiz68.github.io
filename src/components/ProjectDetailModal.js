@@ -21,9 +21,9 @@ export default function ProjectDetailModal({ project, onClose }) {
           </div>
           <button 
             onClick={onClose}
-            className="flex items-center gap-2 bg-primary/5 hover:bg-primary/10 dark:bg-inverse-primary/5 dark:hover:bg-inverse-primary/10 text-primary dark:text-inverse-primary font-label-md text-label-md px-4 py-2 rounded-lg transition-colors cursor-pointer"
+            className="flex items-center gap-2 bg-primary/5 hover:bg-primary/10 dark:bg-inverse-primary/5 dark:hover:bg-inverse-primary/10 text-primary dark:text-inverse-primary font-label-md text-label-md px-5 py-3 rounded-lg transition-colors cursor-pointer"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
             Close
@@ -121,14 +121,16 @@ export default function ProjectDetailModal({ project, onClose }) {
                   Visit Live Site ↗
                 </a>
               )}
-              <a 
-                href={project.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full bg-surface-container-lowest dark:bg-[#2d3133] text-on-surface dark:text-white border border-outline-variant py-3 rounded-lg hover:border-primary dark:hover:border-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors text-center cursor-pointer block"
-              >
-                View Repository Code
-              </a>
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full bg-surface-container-lowest dark:bg-[#2d3133] text-on-surface dark:text-white border border-outline-variant py-3 rounded-lg hover:border-primary dark:hover:border-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors text-center cursor-pointer block"
+                >
+                  View Repository Code
+                </a>
+              )}
             </div>
           </div>
 

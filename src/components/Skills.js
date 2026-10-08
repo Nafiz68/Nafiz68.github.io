@@ -94,7 +94,7 @@ const tools = [
 ];
 
   return (
-    <section id="skills" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative" ref={sectionRef}>
+    <section id="skills" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative" ref={sectionRef}>
       
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">

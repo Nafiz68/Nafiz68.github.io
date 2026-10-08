@@ -11,7 +11,7 @@ const projects = [
     category: "Full Stack",
     duration: "3 months",
     image: "/images/projects/thesisflow.png",
-    spanClass: "col-span-1 md:col-span-2 lg:col-span-8",
+    spanClass: "col-span-1 lg:col-span-6",
     imageAlign: "object-top",
     role: "Lead Full-Stack Developer",
     challenge: "Manual thesis coordination involved back-and-forth emails, causing version mismatches, delayed feedback, and lost documentation between students and supervisors.",
@@ -19,20 +19,89 @@ const projects = [
     deliverables: ["Platform Web App", "Database Schema Design", "LLM Feedback System", "Authentication Module"]
   },
   {
-    title: "QuickHire",
-    description: "An on-demand recruitment dashboard connecting freelance talent with gig opportunities, featuring smart search, saved jobs, and application tracking.",
-    github: "https://github.com/Nafiz68/QuickHire",
-    demo: "https://quick-hire-qtec-sol.vercel.app/",
-    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB", "Three.js"],
+    title: "TrackUp",
+    description: "A full-featured platform for job applications tracking, featuring resume parsing, reminders, and listing insight extractions via NLP.",
+    github: "https://github.com/Nafiz68/TrackUp",
+    demo: "https://trackup-job-tracker.vercel.app/",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Socket.IO", "Docker"],
     category: "Full Stack",
-    duration: "2 months",
-    image: "/images/projects/quickhire.png",
-    spanClass: "col-span-1 lg:col-span-4",
+    duration: "4 months",
+    image: "/images/projects/trackup.png",
+    spanClass: "col-span-1 lg:col-span-6",
+    imageAlign: "object-top",
+    role: "Lead Architect",
+    challenge: "Job seekers lose track of deadlines, application stages, and distinct job parameters when applying to dozens of listings.",
+    solution: "Built a Kanban board dashboard synced with Node background workers that scrape details, parse resumes locally, and push real-time listing statistics over Socket.IO websockets.",
+    deliverables: ["Kanban Application Dashboard", "Resume Extraction Engine", "Real-Time synchronization server", "Vercel & Docker deployments"]
+  },
+  {
+    title: "Sweet Shop POS",
+    description: "Full-stack e-commerce and point-of-sale platform featuring robust shopping cart, admin inventories, and transactional logs.",
+    github: "https://github.com/Nafiz68/sweet-shop-api",
+    demo: "https://sweet-shop-api-ivory.vercel.app/",
+    tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
+    category: "UI Engineering",
+    duration: "1 month",
+    image: "/images/projects/sweetshop.png",
+    spanClass: "col-span-1 lg:col-span-6",
     imageAlign: "object-center",
-    role: "Product & Interface Developer",
-    challenge: "Standard gig platforms have high friction for direct developer matching, requiring complex proposal processes for simple assignments.",
-    solution: "Created a single-click matchmaking funnel utilizing client-side caching, instant filters, and optimized Three.js decorative 3D assets to drive recruitment visual metrics.",
-    deliverables: ["Frontend Web Interface", "Instant Gig matching algorithm", "3D Asset optimizations", "Admin Dashboard"]
+    role: "Backend & DB Architect",
+    challenge: "Boutique sweet shops deal with fresh inventory expiration and localized deliveries requiring flexible billing structures.",
+    solution: "Engineered a PostgreSQL schema integrated with Supabase edge functions to perform inventory checks during transactions, lowering stock discrepancy ratios.",
+    deliverables: ["Point of Sale Web App", "Supabase DB Schema", "Edge functions inventory monitor", "Admin inventory console"]
+  },
+  {
+    title: "Zenji Streetwear - E-Commerce Platform",
+    description: "A responsive, single-page storefront for a streetwear brand, pairing expressive product browsing with polished motion and an energetic visual identity.",
+    demo: "https://zenji-ecommerce-website.vercel.app/",
+    github: "https://github.com/Nafiz68/Zenji-Ecommerce-website",
+    tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "GSAP", "Lenis", "Lucide React"],
+    category: "UI Engineering",
+    duration: "1 month",
+    image: "/images/projects/zenji.png",
+    spanClass: "col-span-1 lg:col-span-6",
+    imageAlign: "object-center",
+    role: "Frontend Developer",
+    challenge: "Create a distinctive online storefront that makes a streetwear collection easy to explore while keeping the experience fluid and usable across screen sizes.",
+    solution: "Built a modern single-page shopping experience with interactive product browsing, responsive layouts, and layered motion effects. Framer Motion, GSAP, and Lenis bring movement and smooth scrolling together without losing focus on the products.",
+    deliverables: ["Responsive Streetwear Storefront", "Interactive Product Browsing", "Animated Page Transitions", "Smooth Scrolling Experience"]
+  },
+  
+  {
+  title: "Multimodal RAG Agent",
+  description: "A multimodal Retrieval-Augmented Generation API that identifies clothing products from customer images using CLIP embeddings, ChromaDB vector search, and an AI-powered retrieval pipeline.",
+  github: "https://github.com/Nafiz68/Multimodal-RAG-Agent-for-Clothing-Store",
+  demo: "https://huggingface.co/spaces/Nafizk368/Multimodal-RAG-Agent-for-Clothing-Store",
+  tech: ["Python", "FastAPI", "LangChain", "ChromaDB", "SQLite", "CLIP", "Hugging Face"],
+  category: "AI / RAG",
+  duration: "1 month",
+  image: "/images/projects/multimodal-rag.png",
+  spanClass: "col-span-1 lg:col-span-4",
+  imageAlign: "object-center",
+  role: "AI & Backend Developer",
+  challenge: "Traditional keyword search struggles to identify clothing items from images, making it difficult to match customer-uploaded photos with the correct products in a catalog.",
+  solution: "Developed a multimodal RAG pipeline that generates CLIP embeddings, performs semantic similarity search with ChromaDB, retrieves product metadata from SQLite, and exposes the workflow through a FastAPI API for real-time image-based product identification.",
+  deliverables: [
+    "Multimodal RAG API",
+    "CLIP Embedding & Vector Search",
+    "FastAPI Backend",
+    "LangChain Retrieval Agent"
+  ]
+  },
+  {
+    title: "Harmonia",
+    description: "A music context understanding platform that combines BERT and graph neural networks to classify, explore, and retrieve music using audio structure, tags, and natural-language descriptions.",
+    github: "https://github.com/Nafiz68/Harmonia",
+    tech: ["React", "Vite", "TypeScript", "Tailwind CSS", "Python", "PyTorch", "PGlite", "Better Auth"],
+    category: "AI / Machine Learning",
+    duration: "Independent Project",
+    image: "/images/projects/harmonia.png",
+    spanClass: "col-span-1 md:col-span-2 lg:col-span-8",
+    imageAlign: "object-center",
+    role: "AI & Full-Stack Developer",
+    challenge: "Music discovery often depends on isolated metadata or simple text matching, which misses relationships between musical structure, descriptive tags, and the language people use to describe what they want to hear.",
+    solution: "Developed an interactive platform centered on a GNN–BERT fusion model. BERT supports multi-label music tagging, GraphSAGE models chord and segment relationships, and contrastive learning connects audio clips with natural-language captions for retrieval. Visualizations help users inspect the connections between music, tags, and text.",
+    deliverables: ["GNN–BERT Music Context Model", "Multi-Label Music Tag Classifier", "Natural-Language Audio Retrieval", "Interactive Music Relationship Visualizations"]
   },
   {
   title: "NavWatch",
@@ -71,25 +140,20 @@ const projects = [
     deliverables: ["Vector Indexing Pipeline", "RAG Answer Generator", "Admin Approval Console", "Asynchronous Redis Workers"]
   },
   {
-  title: "Multimodal RAG Agent",
-  description: "A multimodal Retrieval-Augmented Generation API that identifies clothing products from customer images using CLIP embeddings, ChromaDB vector search, and an AI-powered retrieval pipeline.",
-  github: "https://github.com/Nafiz68/Multimodal-RAG-Agent-for-Clothing-Store",
-  demo: "https://huggingface.co/spaces/Nafizk368/Multimodal-RAG-Agent-for-Clothing-Store",
-  tech: ["Python", "FastAPI", "LangChain", "ChromaDB", "SQLite", "CLIP", "Hugging Face"],
-  category: "AI / RAG",
-  duration: "1 month",
-  image: "/images/projects/multimodal-rag.png",
-  spanClass: "col-span-1 lg:col-span-4",
-  imageAlign: "object-center",
-  role: "AI & Backend Developer",
-  challenge: "Traditional keyword search struggles to identify clothing items from images, making it difficult to match customer-uploaded photos with the correct products in a catalog.",
-  solution: "Developed a multimodal RAG pipeline that generates CLIP embeddings, performs semantic similarity search with ChromaDB, retrieves product metadata from SQLite, and exposes the workflow through a FastAPI API for real-time image-based product identification.",
-  deliverables: [
-    "Multimodal RAG API",
-    "CLIP Embedding & Vector Search",
-    "FastAPI Backend",
-    "LangChain Retrieval Agent"
-  ]
+    title: "QuickHire",
+    description: "An on-demand recruitment dashboard connecting freelance talent with gig opportunities, featuring smart search, saved jobs, and application tracking.",
+    github: "https://github.com/Nafiz68/QuickHire",
+    demo: "https://quick-hire-qtec-sol.vercel.app/",
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB", "Three.js"],
+    category: "Full Stack",
+    duration: "2 months",
+    image: "/images/projects/quickhire.png",
+    spanClass: "col-span-1 lg:col-span-6",
+    imageAlign: "object-center",
+    role: "Product & Interface Developer",
+    challenge: "Standard gig platforms have high friction for direct developer matching, requiring complex proposal processes for simple assignments.",
+    solution: "Created a single-click matchmaking funnel utilizing client-side caching, instant filters, and optimized Three.js decorative 3D assets to drive recruitment visual metrics.",
+    deliverables: ["Frontend Web Interface", "Instant Gig matching algorithm", "3D Asset optimizations", "Admin Dashboard"]
   },
   {
     title: "Credenza",
@@ -100,12 +164,28 @@ const projects = [
     category: "Cybersecurity",
     duration: "1 month",
     image: "/images/projects/credenza.png",
-    spanClass: "col-span-1 lg:col-span-4",
+    spanClass: "col-span-1 lg:col-span-6",
     imageAlign: "object-top",
     role: "Security & Backend Lead",
     challenge: "Storing keys and threat monitoring coordinates in third-party clouds exposes critical infrastructure data to perimeter breaches.",
     solution: "Implemented PBKDF2 key derivation and AES-GCM local encrypting inside the client browser. No plain text data or passwords ever leave the user environment.",
     deliverables: ["Zero-Knowledge Vault UI", "Cryptographic Operations Module", "Prisma Database sync schema", "Reconnaissance visual logs"]
+  },
+
+  {
+    title: "Timing Side-Channel Attack Demonstration",
+    description: "An educational security project exploring how execution-time differences can reveal information about a system’s internal behavior.",
+    github: "https://github.com/Nafiz68/Timing-Side-Channel-Attack-Demonstration",
+    tech: ["Timing Analysis", "Side-Channel Security", "Secure Implementation"],
+    category: "Cybersecurity",
+    duration: "Independent Project",
+    image: "/images/projects/timing-attack.png",
+    spanClass: "col-span-1 lg:col-span-4",
+    imageAlign: "object-center",
+    role: "Security Project Developer",
+    challenge: "Timing differences in software can unintentionally expose clues about hidden data or internal decisions, even when the system does not directly reveal that information.",
+    solution: "Created a demonstration of timing-based information leakage to make the side-channel concept easier to understand and show why secure software needs to account for observable execution behavior.",
+    deliverables: ["Timing Side-Channel Demonstration", "Execution-Time Analysis", "Security Learning Resource"]
   },
   {
   title: "Multi-Agent AI Debate System",
@@ -149,54 +229,25 @@ const projects = [
     "API & Third-Party Integrations"
   ]
   },
-  {
-    title: "TrackUp",
-    description: "A full-featured platform for job applications tracking, featuring resume parsing, reminders, and listing insight extractions via NLP.",
-    github: "https://github.com/Nafiz68/TrackUp",
-    demo: "https://trackup-job-tracker.vercel.app/",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Socket.IO", "Docker"],
-    category: "Full Stack",
-    duration: "4 months",
-    image: "/images/projects/trackup.png",
-    spanClass: "col-span-1 md:col-span-2 lg:col-span-8",
-    imageAlign: "object-top",
-    role: "Lead Architect",
-    challenge: "Job seekers lose track of deadlines, application stages, and distinct job parameters when applying to dozens of listings.",
-    solution: "Built a Kanban board dashboard synced with Node background workers that scrape details, parse resumes locally, and push real-time listing statistics over Socket.IO websockets.",
-    deliverables: ["Kanban Application Dashboard", "Resume Extraction Engine", "Real-Time synchronization server", "Vercel & Docker deployments"]
-  },
-  {
-    title: "Realtime Playlist",
-    description: "Collaborative music queue sync with SSE, drag-and-drop reordering using fractional indexing, and a live voting system.",
-    github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
-    demo: "https://realtime-collaborative-playlist.vercel.app/",
-    tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
-    category: "Full Stack",
-    duration: "2 months",
-    image: "/images/projects/realtime.png",
-    spanClass: "col-span-1 lg:col-span-6",
-    imageAlign: "object-center",
-    role: "Frontend Engineer",
-    challenge: "Managing shared music playlists asynchronously leads to race conditions, stuttering queue sync, and disjointed group voting experiences.",
-    solution: "Leveraged Server-Sent Events (SSE) for sub-second synchronization and fractional indexing algorithms to enable drag-and-drop reordering without database re-indexing loops.",
-    deliverables: ["Synchronized Queue Player UI", "SSE Push Server", "Fractional Index Sorting Module", "Framer Motion animations"]
-  },
-  {
-    title: "Sweet Shop POS",
-    description: "Full-stack e-commerce and point-of-sale platform featuring robust shopping cart, admin inventories, and transactional logs.",
-    github: "https://github.com/Nafiz68/sweet-shop-api",
-    demo: "https://sweet-shop-api-ivory.vercel.app/",
-    tech: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "Supabase (PostgreSQL)"],
-    category: "Full Stack",
-    duration: "1 month",
-    image: "/images/projects/sweetshop.png",
-    spanClass: "col-span-1 lg:col-span-6",
-    imageAlign: "object-center",
-    role: "Backend & DB Architect",
-    challenge: "Boutique sweet shops deal with fresh inventory expiration and localized deliveries requiring flexible billing structures.",
-    solution: "Engineered a PostgreSQL schema integrated with Supabase edge functions to perform inventory checks during transactions, lowering stock discrepancy ratios.",
-    deliverables: ["Point of Sale Web App", "Supabase DB Schema", "Edge functions inventory monitor", "Admin inventory console"]
-  }
+
+  
+  // {
+  //   title: "Realtime Playlist",
+  //   description: "Collaborative music queue sync with SSE, drag-and-drop reordering using fractional indexing, and a live voting system.",
+  //   github: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
+  //   demo: "https://realtime-collaborative-playlist.vercel.app/",
+  //   tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
+  //   category: "Full Stack",
+  //   duration: "2 months",
+  //   image: "/images/projects/realtime.png",
+  //   spanClass: "col-span-1 lg:col-span-6",
+  //   imageAlign: "object-center",
+  //   role: "Frontend Engineer",
+  //   challenge: "Managing shared music playlists asynchronously leads to race conditions, stuttering queue sync, and disjointed group voting experiences.",
+  //   solution: "Leveraged Server-Sent Events (SSE) for sub-second synchronization and fractional indexing algorithms to enable drag-and-drop reordering without database re-indexing loops.",
+  //   deliverables: ["Synchronized Queue Player UI", "SSE Push Server", "Fractional Index Sorting Module", "Framer Motion animations"]
+  // },
+  
 ];
 
 export default function Projects() {
@@ -319,7 +370,7 @@ export default function Projects() {
   }, [activeFilter]);
 
   return (
-    <section id="projects" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="projects" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mb-4">
           PORTFOLIO
@@ -404,7 +455,7 @@ export default function Projects() {
         </div>
       ) : (
         /* Standard Grid when FILTERED to avoid grid gaps */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project, idx) => (
             <article 
               key={idx}

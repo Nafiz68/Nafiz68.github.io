@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
-import { useTheme } from '../contexts/ThemeContext';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  // const { isDarkMode, toggleTheme } = useTheme();
-
   const toggleNav = () => setNavOpen(!navOpen);
   const closeNav = () => setNavOpen(false);
 

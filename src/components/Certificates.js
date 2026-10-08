@@ -12,6 +12,13 @@ export default function Certificates() {
       description: "Covered core AI concepts, machine learning algorithms, ethical implications, and business alignment."
     },
     {
+      title: "Research Training & Competition 2026",
+      issuer: "Elite Research Lab LLC",
+      date: "2026",
+      image: "/images/certificates/elite.png",
+      description: "Completed ELITE Research Lab’s Research Training & Competition 2026, contributing to a research paper as member of LLM Security Research Team.",
+    },
+    {
       title: "Intro to Machine Learning",
       issuer: "Kaggle",
       date: "2025",
@@ -32,13 +39,7 @@ export default function Certificates() {
       image: "/images/certificates/Blockchain.jpg",
       description: "Gained foundational knowledge in distributed ledgers, blockchain validation, and smart contracts."
     },
-    {
-      title: "Intro to Microsoft 365 Copilot",
-      issuer: "Microsoft Learn",
-      date: "2025",
-      image: "/images/certificates/MS365.jpg",
-      description: "Learned automated integration of AI agents within Microsoft productivity environments."
-    },
+    
     {
       title: "Intermediate SQL",
       issuer: "DataCamp",
@@ -49,7 +50,7 @@ export default function Certificates() {
   ];
 
   return (
-    <section id="certificates" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="certificates" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       
       {/* Header */}
       <div className="text-center mb-10 md:mb-12">
@@ -72,11 +73,11 @@ export default function Certificates() {
             {/* Certificate Image Frame */}
             <div 
               onClick={() => setLightboxImg(cert)}
-              className="aspect-video w-full overflow-hidden bg-surface-container dark:bg-inverse-surface relative cursor-pointer border-b border-outline-variant/10"
+              className="aspect-[4/3] w-full overflow-hidden bg-surface-container dark:bg-inverse-surface relative cursor-pointer border-b border-outline-variant/10"
             >
               <img 
                 alt={`${cert.title} Certificate`} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                className="w-full h-full object-contain" 
                 src={cert.image}
                 onError={(e) => {
                   e.target.style.display = 'none';

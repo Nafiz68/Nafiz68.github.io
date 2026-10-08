@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function About() {
-  const handleDownloadCV = () => {
+  const [isResumeMenuOpen, setIsResumeMenuOpen] = useState(false);
+  const resumeMenuRef = useRef(null);
+
+  useEffect(() => {
+    if (!isResumeMenuOpen) return undefined;
+
+    const closeOnOutsideClick = (event) => {
+      if (!resumeMenuRef.current?.contains(event.target)) {
+        setIsResumeMenuOpen(false);
+      }
+    };
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setIsResumeMenuOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isResumeMenuOpen]);
+
+  const handleDownloadCV = (path, filename) => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'CV_Nafiz_Khan_BSc_CSE.pdf';
+    link.href = path;
+    link.download = filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -50,7 +73,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="about" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       {/* Section 1: Professional Bio */}
       <div className="max-w-4xl mx-auto flex flex-col gap-5 mb-12 md:mb-14">
         <div className="flex flex-col gap-5">
@@ -135,15 +158,47 @@ export default function About() {
         <div className="space-y-2 text-center md:text-left">
           <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold">Want to know more?</h3>
           <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest max-w-md">
-            Download my complete resume for detailed information about my academic coursework, qualifications, and achievements.
+            Choose an academic or technical CV to learn more about my background and experience.
           </p>
         </div>
-        <button
-          onClick={handleDownloadCV}
-          className="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-md shadow-primary/20 whitespace-nowrap active:scale-95"
-        >
-          Download Resume
-        </button>
+        <div className="relative" ref={resumeMenuRef}>
+          <button
+            type="button"
+            onClick={() => setIsResumeMenuOpen((open) => !open)}
+            aria-haspopup="menu"
+            aria-expanded={isResumeMenuOpen}
+            className="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-lg hover:scale-105 transition-all duration-200 cursor-pointer shadow-md shadow-primary/20 whitespace-nowrap active:scale-95"
+          >
+            Download Resume
+            <span aria-hidden="true" className="ml-2">▾</span>
+          </button>
+          {isResumeMenuOpen && (
+            <div role="menu" aria-label="Choose a CV" className="absolute right-0 bottom-full mb-2 z-10 min-w-52 overflow-hidden rounded-lg border border-outline-variant/30 bg-white dark:bg-[#191c1e] shadow-lg">
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  handleDownloadCV('/Nafiz_Khan_Academic_CV.pdf', 'Nafiz_Khan_Academic_CV.pdf');
+                  setIsResumeMenuOpen(false);
+                }}
+                className="block w-full px-5 py-3 text-left text-on-surface dark:text-white hover:bg-primary/10 transition-colors"
+              >
+                Academic CV
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  handleDownloadCV('/resume.pdf', 'Nafiz_Khan_Technical_CV.pdf');
+                  setIsResumeMenuOpen(false);
+                }}
+                className="block w-full px-5 py-3 text-left text-on-surface dark:text-white hover:bg-primary/10 transition-colors"
+              >
+                Technical CV
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

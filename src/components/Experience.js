@@ -1,12 +1,25 @@
 import React from 'react';
-import { FaBriefcase, FaGraduationCap, FaCode, FaSearch } from 'react-icons/fa';
+import { FaBriefcase, FaGraduationCap, FaCode, FaSearch, FaFlask } from 'react-icons/fa';
 
 export default function Experience() {
   const experiences = [
     {
       id: 1,
+      position: "Student Researcher",
+      company: "Elite Research Lab LLC",
+      location: "New York, USA",
+      duration: "Sept 2026 – present",
+      type: "Contractual",
+      responsibilities: [
+        "Co-led a four-person team developing a turn-level framework to detect unhealthy relationship formation in mental health chatbot conversations; selected for the lab’s 2026 Research Training and Competition.",
+      ],
+      icon: <FaFlask size={18} />,
+      iconColor: "text-primary border-primary dark:text-inverse-primary dark:border-inverse-primary"
+    },
+    {
+      id: 2,
       position: "Automation Specialist",
-      company: "Softvence",
+      company: "Softvence Agency",
       location: "Dhaka, Bangladesh",
       duration: "Apr 2026 – June 2026",
       type: "Full Time",
@@ -19,7 +32,7 @@ export default function Experience() {
       iconColor: "text-primary border-primary dark:text-inverse-primary dark:border-inverse-primary"
     },
     {
-      id: 2,
+      id: 3,
       position: "Executive, Network & IT",
       company: "Wintel Limited",
       location: "Dhaka, Bangladesh",
@@ -33,7 +46,7 @@ export default function Experience() {
       iconColor: "text-secondary border-secondary dark:text-surface-container-highest dark:border-surface-container-highest"
     },
     {
-      id: 3,
+      id: 4,
       position: "Undergraduate Researcher",
       company: "BRAC University – CSE Department",
       location: "Dhaka, Bangladesh",
@@ -52,7 +65,7 @@ export default function Experience() {
       iconColor: "text-primary border-primary dark:text-inverse-primary dark:border-inverse-primary"
     },
     {
-      id: 4,
+      id: 5,
       position: "IT Instructor",
       company: "Zentorra",
       location: "Dhaka, Bangladesh",
@@ -65,26 +78,11 @@ export default function Experience() {
       ],
       icon: <FaGraduationCap size={18} />,
       iconColor: "text-secondary border-secondary dark:text-surface-container-highest dark:border-surface-container-highest"
-    },
-    {
-      id: 5,
-      position: "Private Tutor",
-      company: "Self-Employed",
-      location: "Dhaka, Bangladesh",
-      duration: "Jan 2024 – Apr 2025",
-      type: "Tutoring",
-      responsibilities: [
-        "Tutored undergraduates in Python Data Structures and Computer Graphics concepts.",
-        "Specialized in helping students understand complex structures like trees, recursion, and search algorithms.",
-        "Provided hands-on guidance with OpenGL programming, shader pipelines, and graphics rendering techniques."
-      ],
-      icon: <FaGraduationCap size={18} />,
-      iconColor: "text-secondary border-secondary dark:text-surface-container-highest dark:border-surface-container-highest"
     }
   ];
 
   return (
-    <section id="experience" className="py-12 md:py-16 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+    <section id="experience" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
       <div className="text-center mb-10 md:mb-12">
         <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-sm text-label-sm px-3 py-1 rounded w-max tracking-wider mb-4">
           JOURNEY

@@ -27,7 +27,7 @@ export default function Footer() {
             Nafiz Khan
           </Link>
           <span className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest">
-            Built with precision.
+            GODSPEED!
           </span>
         </div>
 
