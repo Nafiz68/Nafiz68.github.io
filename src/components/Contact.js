@@ -1,5 +1,64 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGraduationCap } from 'react-icons/fa';
+import SectionHeader from './fx/SectionHeader';
+import { Reveal } from './fx/Reveal';
+import Magnetic from './fx/Magnetic';
+
+const contactMethods = [
+  {
+    icon: <FaEnvelope className="w-4 h-4" />,
+    title: "Email",
+    value: "nafizk368@gmail.com",
+    link: "mailto:nafizk368@gmail.com"
+  },
+  {
+    icon: <FaPhone className="w-4 h-4" />,
+    title: "Phone Number",
+    value: "+8801317266368",
+    link: "tel:+8801317266368"
+  },
+  {
+    icon: <FaMapMarkerAlt className="w-4 h-4" />,
+    title: "Location",
+    value: "Dhaka, Bangladesh",
+    link: "https://maps.google.com/?q=Dhaka,Bangladesh"
+  }
+];
+
+const socialLinks = [
+  { icon: <FaGithub className="w-4 h-4" />, url: "https://github.com/Nafiz68", label: "GitHub" },
+  { icon: <FaLinkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/nafiz-khan-34b7a6309", label: "LinkedIn" },
+  { icon: <FaFacebook className="w-4 h-4" />, url: "https://www.facebook.com/share/1B5896cUtx/", label: "Facebook" },
+  { icon: <FaInstagram className="w-4 h-4" />, url: "https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr", label: "Instagram" },
+  { icon: <FaGraduationCap className="w-4 h-4" />, url: "https://scholar.google.com/citations?user=PSQeWhkAAAAJ&hl=en", label: "Google Scholar" }
+];
+
+function Field({ id, label, type = 'text', value, onChange, textarea }) {
+  const Comp = textarea ? 'textarea' : 'input';
+  return (
+    <div className="relative group">
+      <Comp
+        id={id}
+        name={id}
+        type={textarea ? undefined : type}
+        rows={textarea ? 3 : undefined}
+        required
+        value={value}
+        onChange={onChange}
+        placeholder=" "
+        className="peer w-full bg-transparent border-b border-fog/10 pt-5 pb-2 text-[15px] text-fog outline-none resize-none transition-colors focus:border-transparent"
+      />
+      <label
+        htmlFor={id}
+        className="absolute left-0 top-5 text-[15px] text-muted pointer-events-none transition-all duration-300 peer-focus:top-0 peer-focus:text-[11px] peer-focus:text-accent peer-focus:font-mono peer-focus:uppercase peer-focus:tracking-[0.18em] peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[11px] peer-[:not(:placeholder-shown)]:font-mono peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.18em]"
+      >
+        {label}
+      </label>
+      <span className="absolute left-0 bottom-0 h-px w-full bg-accent origin-left scale-x-0 peer-focus:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+    </div>
+  );
+}
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +67,7 @@ export default function Contact() {
     subject: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
@@ -22,7 +81,7 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Formspree integration
       const response = await fetch('https://formspree.io/f/xvgwgzyp', {
@@ -56,229 +115,134 @@ export default function Contact() {
     }
   };
 
-  const contactMethods = [
-    {
-      icon: <FaEnvelope className="w-5 h-5" />,
-      title: "Email",
-      value: "nafizk368@gmail.com",
-      link: "mailto:nafizk368@gmail.com"
-    },
-    {
-      icon: <FaPhone className="w-5 h-5" />,
-      title: "Phone Number",
-      value: "+8801317266368",
-      link: "tel:+8801317266368"
-    },
-    {
-      icon: <FaMapMarkerAlt className="w-5 h-5" />,
-      title: "Location",
-      value: "Dhaka, Bangladesh",
-      link: "https://maps.google.com/?q=Dhaka,Bangladesh"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <FaGithub className="w-5 h-5" />,
-      url: "https://github.com/Nafiz68",
-      label: "GitHub",
-      hoverClass: "hover:text-[#181717] dark:hover:text-white hover:border-[#181717]/50 dark:hover:border-white/50"
-    },
-    {
-      icon: <FaLinkedin className="w-5 h-5" />,
-      url: "https://www.linkedin.com/in/nafiz-khan-34b7a6309",
-      label: "LinkedIn"
-    },
-    {
-      icon: <FaFacebook className="w-5 h-5" />,
-      url: "https://www.facebook.com/share/1B5896cUtx/",
-      label: "Facebook"
-    },
-    {
-      icon: <FaInstagram className="w-5 h-5" />,
-      url: "https://www.instagram.com/swapped_nil?igsh=bWFhNHUxbGdsbjZr",
-      label: "Instagram",
-      hoverClass: "hover:text-[#E4405F] hover:border-[#E4405F]/50"
-    },
-    {
-      icon: <FaGraduationCap className="w-5 h-5" />,
-      url: "https://scholar.google.com/citations?user=PSQeWhkAAAAJ&hl=en",
-      label: "Google Scholar"
-    }
-  ];
-
   return (
-    <section id="contact" className="py-8 md:py-10 border-t border-surface-variant/30 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
-      
-      {/* Header */}
-      <div className="text-center mb-10 md:mb-12">
-        <div className="inline-block bg-primary-fixed text-on-primary-fixed dark:bg-primary-fixed-dim/20 dark:text-inverse-primary font-label-lg text-label-lg px-3 py-1 rounded w-max tracking-wider mb-4">
-          CONNECT
-        </div>
-        <h2 className="font-headline-lg text-headline-lg text-on-surface dark:text-white mb-2">Let's Work Together</h2>
-        <p className="font-body-md text-body-md text-secondary dark:text-surface-container-highest max-w-md mx-auto">
-          Have a project in mind or want to collaborate? I'm always open to new opportunities.
-        </p>
-      </div>
+    <section id="contact" className="relative py-14 md:py-20">
+      <div className="container-x">
+        <SectionHeader
+          index="06"
+          label="Connect"
+          title="Let's build something *remarkable*."
+          description="Have a project in mind or want to collaborate? I'm always open to new opportunities."
+        />
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
-        
-        {/* Info Column */}
-        <div className="space-y-6">
-          <div>
-            <h3 className="font-headline-md text-headline-md text-on-surface dark:text-white font-bold mb-4">
-              Get In Touch
-            </h3>
-            <p className="font-body-md text-body-md text-on-surface-variant dark:text-surface-container-highest leading-relaxed max-w-md">
-              Whether you have a question about my work, need assistance with Python algorithms or full-stack projects, or want to discuss automation pipelines, feel free to reach out!
-            </p>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Info */}
+          <div className="lg:col-span-5 space-y-7">
+            <Reveal>
+              <p className="text-muted leading-relaxed max-w-md">
+                Whether you have a question about my work, need assistance with Python algorithms or full-stack projects, or want to discuss automation pipelines, feel free to reach out!
+              </p>
+            </Reveal>
 
-          {/* Contact Details List */}
-          <div className="space-y-4">
-            {contactMethods.map((method, idx) => (
-              <a 
-                key={idx}
-                href={method.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-on-surface-variant dark:text-surface-container-highest hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 group cursor-pointer"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/5 dark:bg-inverse-primary/5 flex items-center justify-center text-primary dark:text-inverse-primary group-hover:scale-105 transition-transform">
-                  {method.icon}
-                </div>
-                <div>
-                  <h4 className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest uppercase tracking-wider">{method.title}</h4>
-                  <p className="font-body-md text-body-md text-on-surface dark:text-white font-bold text-sm">{method.value}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* Social Links */}
-          <div className="pt-4 border-t border-surface-variant/30">
-            <h4 className="font-label-sm text-label-sm text-secondary dark:text-surface-container-highest uppercase tracking-wider mb-4">Social Handles</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((social, idx) => (
-                <a 
-                  key={idx} 
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className={`w-11 h-11 rounded-lg bg-white dark:bg-[#191c1e] flex items-center justify-center border border-outline-variant/30 text-secondary dark:text-surface-container-highest ${social.hoverClass || "hover:text-primary dark:hover:text-inverse-primary hover:border-primary/50 dark:hover:border-inverse-primary/50"} hover:scale-105 transition-all soft-shadow cursor-pointer`}
-                >
-                  {social.icon}
-                </a>
+            <div className="border-t hairline">
+              {contactMethods.map((method, idx) => (
+                <Reveal key={method.title} delay={idx * 0.08}>
+                  <a
+                    href={method.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-5 py-3.5 border-b hairline overflow-hidden"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-accent/[0.07] to-transparent -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                    <span className="relative w-10 h-10 rounded-full border hairline flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-on-accent transition-colors duration-500">
+                      {method.icon}
+                    </span>
+                    <span className="relative flex-1">
+                      <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-dim">{method.title}</span>
+                      <span className="block text-fog mt-0.5">{method.value}</span>
+                    </span>
+                    <span className="relative text-muted group-hover:text-accent transition-all duration-500 group-hover:rotate-[-45deg]">→</span>
+                  </a>
+                </Reveal>
               ))}
             </div>
+
+            <Reveal>
+              <h4 className="font-mono text-[10px] uppercase tracking-[0.2em] text-dim mb-4">Social handles</h4>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((social) => (
+                  <Magnetic key={social.label} strength={0.4}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      title={social.label}
+                      className="w-11 h-11 rounded-full border hairline bg-ink-900 flex items-center justify-center text-muted hover:text-on-accent hover:bg-accent hover:border-accent transition-colors duration-300"
+                    >
+                      {social.icon}
+                    </a>
+                  </Magnetic>
+                ))}
+              </div>
+            </Reveal>
           </div>
-        </div>
 
-        {/* Form Column */}
-        <div className="bg-white dark:bg-[#191c1e] p-6 rounded-xl border border-outline-variant/30 soft-shadow">
-          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-            
-            <div className="flex flex-col gap-2">
-              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="name">Your Name</label>
-              <input 
-                type="text" 
-                id="name"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="email">Email Address</label>
-              <input 
-                type="email" 
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="john@example.com"
-                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="subject">Subject</label>
-              <input 
-                type="text" 
-                id="subject"
-                name="subject"
-                required
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="Let's collaborate on..."
-                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all placeholder:text-secondary-fixed-dim"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="font-label-md text-label-md text-on-surface dark:text-white font-bold" htmlFor="message">Message</label>
-              <textarea 
-                id="message"
-                name="message"
-                required
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Tell me about your project..."
-                className="w-full bg-transparent border-b border-outline-variant focus:border-primary dark:focus:border-inverse-primary focus:border-b-2 outline-none py-2 font-body-md text-body-md text-on-surface dark:text-white transition-all resize-none placeholder:text-secondary-fixed-dim"
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit"
-              disabled={isSubmitting}
-              className={`bg-primary text-on-primary font-label-md text-label-md py-3 px-6 rounded-lg hover:scale-[1.02] active:scale-95 transition-all w-full md:w-auto self-start shadow-md shadow-primary/20 flex items-center justify-center gap-2 cursor-pointer ${
-                isSubmitting ? "opacity-80" : ""
-              }`}
-            >
-              {isSubmitting ? (
-                <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Sending...
-                </>
-              ) : (
-                "Send Message"
-              )}
-            </button>
-
-            {submitStatus === 'success' && (
-              <div className="text-green-600 dark:text-green-400 font-body-md text-body-md text-sm mt-2 flex items-center gap-1.5">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                </svg>
-                Message sent successfully! I'll get back to you soon.
+          {/* Form: terminal window */}
+          <Reveal delay={0.1} className="lg:col-span-7">
+            <div className="rounded-2xl border hairline bg-ink-900/80 overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]">
+              <div className="flex items-center gap-2 px-5 h-11 border-b hairline bg-ink-850">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]/80" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]/80" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]/80" />
+                <span className="ml-3 font-mono text-[11px] text-dim">~/contact/new_message.sh</span>
               </div>
-            )}
 
-            {submitStatus === 'error' && (
-              <div className="text-red-600 dark:text-red-400 font-body-md text-body-md text-sm mt-2 flex items-center gap-1.5">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path>
-                </svg>
-                Failed to send message. Please try again.
-              </div>
-            )}
+              <form className="p-5 md:p-7 flex flex-col gap-5" onSubmit={handleSubmit}>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <Field id="name" label="Your name" value={formData.name} onChange={handleChange} />
+                  <Field id="email" label="Email address" type="email" value={formData.email} onChange={handleChange} />
+                </div>
+                <Field id="subject" label="Subject" value={formData.subject} onChange={handleChange} />
+                <Field id="message" label="Tell me about your project" textarea value={formData.message} onChange={handleChange} />
 
-          </form>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-2">
+                  <div className="font-mono text-[11px] text-dim min-h-[18px]">
+                    <AnimatePresence mode="wait">
+                      {submitStatus === 'success' && (
+                        <motion.span key="ok" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-accent">
+                          ✓ Message sent successfully! I'll get back to you soon.
+                        </motion.span>
+                      )}
+                      {submitStatus === 'error' && (
+                        <motion.span key="err" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-red-400">
+                          ✕ Failed to send message. Please try again.
+                        </motion.span>
+                      )}
+                      {!submitStatus && (
+                        <motion.span key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                          &gt; awaiting input<span className="caret">_</span>
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  <Magnetic>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="group relative overflow-hidden rounded-full bg-accent text-on-accent pl-6 pr-1.5 py-1.5 text-sm font-semibold flex items-center gap-4 disabled:opacity-70"
+                    >
+                      <span className="absolute inset-0 bg-fog translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                      <span className="relative">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                      <span className="relative w-9 h-9 rounded-full bg-ink-950 text-accent flex items-center justify-center">
+                        {isSubmitting ? (
+                          <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                          </svg>
+                        ) : (
+                          <span className="transition-transform duration-500 group-hover:rotate-[-45deg]">→</span>
+                        )}
+                      </span>
+                    </button>
+                  </Magnetic>
+                </div>
+              </form>
+            </div>
+          </Reveal>
         </div>
-
       </div>
-
     </section>
   );
 }
