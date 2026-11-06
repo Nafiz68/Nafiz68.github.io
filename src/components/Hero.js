@@ -83,7 +83,7 @@ function PhotoCard({ ready }) {
           <img
             alt="Nafiz Khan"
             src="/images/profile-photo.jpg"
-            className="w-full h-full object-cover grayscale-[65%] contrast-[1.05] transition-all duration-1000 ease-out group-hover:grayscale-0 group-hover:scale-[1.04]"
+            className="w-full h-full object-cover object-[72%_50%] grayscale-[65%] contrast-[1.05] transition-all duration-1000 ease-out group-hover:grayscale-0 group-hover:scale-[1.04]"
             onError={(e) => {
               e.target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600';
             }}

@@ -15,8 +15,11 @@ const readPalette = () => {
 
 // Site-wide backdrop: twinkling stars plus a drifting node graph that reaches for the pointer.
 // Fixed to the viewport; scrolling shifts both layers at different speeds for depth.
-export default function NeuralCanvas({ className = '' }) {
+export default function NeuralCanvas({ className = '', paused = false }) {
   const canvasRef = useRef(null);
+  // Read inside the loop so toggling it doesn't restart the effect (and reshuffle nodes).
+  const pausedRef = useRef(paused);
+  pausedRef.current = paused;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -73,6 +76,12 @@ export default function NeuralCanvas({ className = '' }) {
     };
 
     const draw = () => {
+      // Hidden behind the intro: skip the work but keep the loop alive.
+      if (pausedRef.current && !reduced) {
+        lastScroll = window.scrollY;
+        if (running) frame = requestAnimationFrame(draw);
+        return;
+      }
       t += 0.016;
       const { fog, muted, accent, boost } = palette;
       ctx.clearRect(0, 0, width, height);

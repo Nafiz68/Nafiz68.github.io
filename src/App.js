@@ -27,6 +27,8 @@ const shouldShowIntro = () => {
 
 function App() {
   const [booting, setBooting] = useState(shouldShowIntro);
+  // The intro covers the page until its split reveal starts; background work waits until then.
+  const [covered, setCovered] = useState(booting);
 
   useEffect(() => initSmoothScroll(), []);
 
@@ -45,9 +47,11 @@ function App() {
     <ThemeProvider>
       <MotionConfig reducedMotion="user">
         <AnimatePresence>
-          {booting && <Preloader key="preloader" onDone={() => setBooting(false)} />}
+          {booting && (
+            <Preloader key="preloader" onReveal={() => setCovered(false)} onDone={() => setBooting(false)} />
+          )}
         </AnimatePresence>
-        <Background />
+        <Background paused={covered} />
         <Cursor />
         <Navbar ready={!booting} />
         <main>

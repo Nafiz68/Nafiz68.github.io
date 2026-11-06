@@ -4,7 +4,7 @@ import NeuralCanvas from './NeuralCanvas';
 
 // Fixed page backdrop (glows, grid, starfield), scroll progress bar,
 // and the pointer tracking that drives `.spotlight` cards.
-export default function Background() {
+export default function Background({ paused = false }) {
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24, mass: 0.3 });
 
@@ -48,7 +48,7 @@ export default function Background() {
             WebkitMaskImage: 'radial-gradient(ellipse 80% 55% at 50% 0%, #000 20%, transparent 80%)',
           }}
         />
-        <NeuralCanvas className="absolute inset-0" />
+        <NeuralCanvas className="absolute inset-0" paused={paused} />
       </div>
       <motion.div
         aria-hidden="true"
